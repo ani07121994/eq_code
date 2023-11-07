@@ -1,0 +1,163 @@
+.btn-danger {
+    color: #fff;
+    background-color: #e00;
+    border-color: #e00;
+}
+
+.tooltip {
+		font-family: Tahoma,sans-serif,Helvetica !important;
+	}
+
+.panel-default>.panel-heading:hover{
+	
+	background-color: #4d4d4d !important;
+	color : #FFFFFF !important;
+	cursor:pointer;
+}
+
+.columnValue:hover{
+  background-color: #a6a6a6 !important;
+  color : black !important;
+  font-weight : bold;
+  cursor: pointer;
+ }
+ 
+
+.table-bordered>tbody>tr>td{
+	
+	font-size : smaller;
+}
+
+.navbar-default{
+  background-image: url("../images/headerBg.jpg");
+  /*background-color: black;*/
+  height: 58px;
+  
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: x-large;
+    transform: translatex(-50%);
+}
+
+/* 
+.navbar,.navbar-collapse,.navbar-default {
+  text-align: center;
+} */
+
+/* .customContent {
+    position: relative !important;
+    width: 900px !important;
+    margin-left: -190px !important;
+  } */
+    
+
+
+.entry .title:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 8px green !important;
+	background-color : green !important;
+    border-radius: 100%;
+    top: 15%;
+    right: -12px;
+    z-index: 99;
+}
+
+.modal-header{
+      /* background-color: #323232 !important; */
+      color: black !important;
+      text-align : center;
+      border-color : black;
+      /*background-color : #323232 !important;*/
+       background: -webkit-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218));
+       background: linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218));
+       
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=1);/*For Internet Explorer*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=0 );/*For Internet Explorer */
+    
+}
+
+.customTable {
+	display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 1500px;
+    height: 10px;
+    background-color: #d9d9d9 !important;
+    color : black !important;
+    margin-top : 6px;
+    margin-bottom : 5px;
+    border-collapse: collapse;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+.customTable>tbody>tr>td, .customTable>tbody>tr>th, .customTable>tfoot>tr>td, .customTable>tfoot>tr>th, .customTable>thead>tr>td, .customTable>thead>tr>th {
+    padding: 8px;
+    line-height: 1px;
+    vertical-align: top;
+    
+}
+
+.customTable-bordered {
+    border: 1px solid black;
+    
+}
+
+.customTable-bordered>tbody>tr>td, .customTable-bordered>tbody>tr>th, .customTable-bordered>tfoot>tr>td, .customTable-bordered>tfoot>tr>th, .customTable-bordered>thead>tr>td, .customTable-bordered>thead>tr>th {
+    border: 1px solid #333;
+}
+
+.panel-primary {
+    /* border-color: black; */
+    border-color: #337ab7;
+    background-color : #f2f2f2;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+.table-responsive {
+    min-height: 80px;
+    } 
+    
+    .panel-title {
+    	font-weight : 600;
+    	font-size: 12px;
+    }
+    
+    .panel-body {
+    padding: 5px;
+}
+    
+ .panel-primary > .panel-heading {   
+ 	color : black;
+ 	
+     background: -webkit-linear-gradient(rgb(28, 101, 171), rgb(172,202,229), rgb(138,182,218));
+    background: -webkit-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /*For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /*For Opera 11.1 to 12.0*/
+    background: -moz-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /*For Firefox 3.6 to 15*/
+    background: linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /*Standard syntax*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=1); /*For Internet Explorer*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=0 ); /*For Internet Explorer*/ 
+    
+    
+    /*background: linear-gradient(#ef7e7e, #f3e6e6, #d86262);*/
+    
+    
+ }
+ 
+

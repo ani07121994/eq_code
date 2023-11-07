@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5"> -->
+  <web-app 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+  <display-name>AuditHistory</display-name>
+  <servlet>
+    <servlet-name>AuditHistory</servlet-name>
+    <servlet-class>com.audit.servlet.AuditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuditHistory</servlet-name>
+    <url-pattern>/AuditHistoryScreen</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FetchInvoiceData</servlet-name>
+    <servlet-class>com.audit.servlet.FetchInvoiceDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FetchInvoiceData</servlet-name>
+    <url-pattern>/FetchInvoiceData</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FetchInvoiceAuditData</servlet-name>
+    <servlet-class>com.audit.servlet.FetchInvoiceAuditDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FetchInvoiceAuditData</servlet-name>
+    <url-pattern>/FetchInvoiceAuditData</url-pattern>
+  </servlet-mapping>
+<listener>
+    <listener-class>com.audit.utility.ContextInitializer</listener-class>
+  </listener>
+</web-app>

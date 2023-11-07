@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ejbModule"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="ImportedClasses"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/jdeveloper/soa/modules/oracle.soa.worklist_11.1.1/oracle.soa.worklist.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/jdeveloper/soa/modules/oracle.soa.workflow_11.1.1/bpm-services.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/jdeveloper/soa/modules/oracle.soa.workflow_11.1.1/bpm-workflow-datacontrol.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/jdeveloper/soa/modules/oracle.soa.workflow_11.1.1/oracle.soa.workflow.jar"/>
+	<classpathentry kind="lib" path="C:/Oracle/Middleware/jdeveloper/soa/modules/oracle.soa.workflow_11.1.1/oracle.soa.workflow.wc.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

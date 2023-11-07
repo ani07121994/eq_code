@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" version="5">
+  <display-name>Ap_AutoReject_mailSender</display-name>
+  <module>
+    <web>
+      <web-uri>JS_EmailSender-JS_EmailSenderProj-context-root.war</web-uri>
+      <context-root>AP_EmailSender</context-root>
+    </web>
+  </module>
+</application>
