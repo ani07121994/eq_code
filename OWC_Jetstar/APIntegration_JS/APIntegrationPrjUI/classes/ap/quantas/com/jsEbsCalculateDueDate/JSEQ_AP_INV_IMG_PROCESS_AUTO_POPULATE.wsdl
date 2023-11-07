@@ -1,0 +1,34 @@
+<WL5G3N2:definitions
+     name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+     xmlns:WL5G3N3="http://xmlns.oracle.com/pcbpel/adapter/db/sp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+     xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:WL5G3N0="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+    >
+    <WL5G3N0:partnerLinkType name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_plt">
+        <WL5G3N0:role name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_role">
+            <WL5G3N0:portType name="WL5G3N1:JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_ptt"/>
+        </WL5G3N0:role>
+    </WL5G3N0:partnerLinkType>
+    <WL5G3N2:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+             xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+                 schemaLocation="JETSTAR_AUTO_POPULATE_SCHEMA_2FJetStarService_2FResources_2FXSD_2FJSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_sp.xsd"/>
+        </schema>
+    </WL5G3N2:types>
+    <WL5G3N2:message name="args_in_msg">
+        <WL5G3N2:part name="InputParameters" element="WL5G3N3:InputParameters"/>
+    </WL5G3N2:message>
+    <WL5G3N2:message name="args_out_msg">
+        <WL5G3N2:part name="OutputParameters" element="WL5G3N3:OutputParameters"/>
+    </WL5G3N2:message>
+    <WL5G3N2:portType name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_ptt">
+        <WL5G3N2:operation name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE">
+            <WL5G3N2:input message="WL5G3N1:args_in_msg"/>
+            <WL5G3N2:output message="WL5G3N1:args_out_msg"/>
+        </WL5G3N2:operation>
+    </WL5G3N2:portType>
+</WL5G3N2:definitions>

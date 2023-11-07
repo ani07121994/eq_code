@@ -1,0 +1,150 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/ValidationService" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/ValidationService" elementFormDefault="qualified">
+   <element name="InputParameters">
+      <complexType>
+         <sequence>
+            <element name="P_INVOICE_IN" type="db:APPS.INVOICE_HEADER_REC" db:index="1" db:type="Struct" minOccurs="0" nillable="true"/>
+            <element name="P_INV_LINE" type="db:APPS.INVOICE_IN_TBL_TYPE" db:index="2" db:type="Array" minOccurs="0" nillable="true"/>
+            <element name="P_CALLED_FROM" type="string" db:index="3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <element name="OutputParameters">
+      <complexType>
+         <sequence>
+            <element name="P_INVOICE_IN" type="db:APPS.INVOICE_HEADER_REC" db:index="1" db:type="Struct" minOccurs="0" nillable="true"/>
+            <element name="P_INV_LINE" type="db:APPS.INVOICE_IN_TBL_TYPE" db:index="2" db:type="Array" minOccurs="0" nillable="true"/>
+            <element name="OUT_RESULT" type="db:APPS.OUT_RESULT_TBL_TYPE" db:index="4" db:type="Array" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <complexType name="APPS.OUT_RESULT_TBL_TYPE">
+      <sequence>
+         <element name="OUT_RESULT_ITEM" type="db:APPS.OUT_RESULT_REC" db:type="Struct" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.INVOICE_IN_TBL_TYPE">
+      <sequence>
+         <element name="P_INV_LINE_ITEM" type="db:APPS.INVOICE_LINE_REC" db:type="Struct" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.INVOICE_LINE_REC">
+      <sequence>
+         <element name="LINENO" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="LINETYPE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="LINEPONUMBER" type="db:string20" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="POLINENUMBER" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="LINEDESCRIPTION" type="db:string500" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="QUANTITY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="UOM" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="UNITPRICE" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="LINETOTALAMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="TAXRATE" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="TAXRATECODE" type="db:string10" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PROJECTNO" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TASKNO" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EXPENDITUREORG" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EXPENDITUREDATE" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="GLNO" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.OUT_RESULT_REC">
+      <sequence>
+         <element name="EXCEPTIONREASON" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EXCEPTIONTYPE" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ERRORMESSAGE" type="db:string4000" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="APPS.INVOICE_HEADER_REC">
+      <sequence>
+         <element name="DOCUMENTTYPE" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICETYPE" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ORGID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="INVOICENUMBER" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICEDATE" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIERID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIERNAME" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIERNUMBER" type="db:string30" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SITEID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="SITENAME" type="db:string15" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PONUMBER" type="db:string20" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TAXREGISTRATIONNUMBER" type="db:string20" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TAX" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="WITHHOLDINGTAX" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICETOTALAMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="CURRENCYCODE" type="db:string15" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIERNAME" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EMPLOYEENO" type="db:string30" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIEREMAILADD" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVALIDREASON" type="db:string500" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVALIDCODE" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="POTYPE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="IMAGEURL" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PRIORITY" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="REASONTYPE" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="STATUS" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="REJECTIONREASON" type="db:string300" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIERCOMMENTS" type="db:string500" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ALTERNATEAPPROVER" type="db:string240" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <simpleType name="string200">
+      <restriction base="string">
+         <maxLength value="200"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string50">
+      <restriction base="string">
+         <maxLength value="50"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string240">
+      <restriction base="string">
+         <maxLength value="240"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string30">
+      <restriction base="string">
+         <maxLength value="30"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string15">
+      <restriction base="string">
+         <maxLength value="15"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string20">
+      <restriction base="string">
+         <maxLength value="20"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string100">
+      <restriction base="string">
+         <maxLength value="100"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string500">
+      <restriction base="string">
+         <maxLength value="500"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string25">
+      <restriction base="string">
+         <maxLength value="25"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string300">
+      <restriction base="string">
+         <maxLength value="300"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string10">
+      <restriction base="string">
+         <maxLength value="10"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string4000">
+      <restriction base="string">
+         <maxLength value="4000"/>
+      </restriction>
+   </simpleType>
+</schema>

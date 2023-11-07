@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.2.22" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="APIntegrationProcess">
+        <topicDocumentations>
+            <topicDocumentation name="APIntegrationProcess">
+                <descriptions>
+                    <description locale="en">APIntegrationProcess</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1567056958807">
+                <labels>
+                    <label locale="en">InsertTransactionTBL</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15695485541694">
+                <labels>
+                    <label locale="en">AssignADF</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15696277414734">
+                <labels>
+                    <label locale="en">EBSValidation</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704172497815">
+                <labels>
+                    <label locale="en">APOperationTeam</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704687803812">
+                <labels>
+                    <label locale="en">Certifier</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704828316523">
+                <labels>
+                    <label locale="en">AssignECMData</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704847872338">
+                <labels>
+                    <label locale="en">UpdateECM</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704895852729">
+                <labels>
+                    <label locale="en">Rejector</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15704933745836">
+                <labels>
+                    <label locale="en">UpdateCertifierTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15720983375959">
+                <labels>
+                    <label locale="en">AssignReasonBR</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15758148908316">
+                <labels>
+                    <label locale="en">AssignWFR</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1575840489242">
+                <labels>
+                    <label locale="en">UpdateTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15764755553726">
+                <labels>
+                    <label locale="en">FetchTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15764761479115">
+                <labels>
+                    <label locale="en">AssignEBS</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15764877074798">
+                <labels>
+                    <label locale="en">AdjustLineUpd</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765101216043">
+                <labels>
+                    <label locale="en">UpdateAPTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765211903063">
+                <labels>
+                    <label locale="en">AssignECMData</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765219431551">
+                <labels>
+                    <label locale="en">UpdateECM</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT1576534798724">
+                <labels>
+                    <label locale="en">UpdateRejectorTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765360366560">
+                <labels>
+                    <label locale="en">AssignECMData</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765377589642">
+                <labels>
+                    <label locale="en">UpdateECM</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15765594329455">
+                <labels>
+                    <label locale="en">Subprocess</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT15765594746226">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT1576559474639">
+                <labels>
+                    <label locale="en">End1</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf49"/>
+            <topicDocumentation name="EVT1567047667767">
+                <labels>
+                    <label locale="en">IntiatiateWFR</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT15670476677655">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT15704918545170">
+                <labels>
+                    <label locale="en">EndRejector</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW15697020451942">
+                <labels>
+                    <label locale="en">InvalidReason</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW15704158943751">
+                <labels>
+                    <label locale="en">Validate</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW15704649652879">
+                <labels>
+                    <label locale="en">CheckForPO</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW1570489252808">
+                <labels>
+                    <label locale="en">APoutcome</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW15704947633174">
+                <labels>
+                    <label locale="en">CertifierOutcome</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT15781627899418">
+                <labels>
+                    <label locale="en">AssignSearch</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf139"/>
+            <topicDocumentation name="sf142"/>
+            <topicDocumentation name="sf65"/>
+            <topicDocumentation name="sf67"/>
+            <topicDocumentation name="sf68"/>
+            <topicDocumentation name="sf64">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf77"/>
+            <topicDocumentation name="sf79">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf81">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf84">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf137"/>
+            <topicDocumentation name="sf147"/>
+            <topicDocumentation name="sf56"/>
+            <topicDocumentation name="sf58">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf60">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf62"/>
+            <topicDocumentation name="sf83">
+                <labels>
+                    <label locale="en"></label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf86"/>
+            <topicDocumentation name="sf88"/>
+            <topicDocumentation name="sf94"/>
+            <topicDocumentation name="sf97"/>
+            <topicDocumentation name="sf37"/>
+            <topicDocumentation name="sf39"/>
+            <topicDocumentation name="sf82"/>
+            <topicDocumentation name="sf85"/>
+            <topicDocumentation name="sf91"/>
+            <topicDocumentation name="sf43"/>
+            <topicDocumentation name="sf44"/>
+            <topicDocumentation name="sf45"/>
+            <topicDocumentation name="sf46"/>
+            <topicDocumentation name="sf47"/>
+            <topicDocumentation name="sf48"/>
+            <topicDocumentation name="sf89"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

@@ -1,0 +1,1694 @@
+/*body
+{
+  background-color: White;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1
+{
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+h2
+{
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+h3
+{
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: lighter;
+  text-transform: capitalize;
+}*/
+
+
+
+body {
+    background-color: White;
+    color: black;
+     font-family: Arial;
+}
+/*h1
+{
+  color: Fuchsia;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: capitalize;
+}*/
+h2 {
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+h3 {
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.SWGlassPadding {
+    padding-left: 16.0px;
+    /* padding-bottom: 5.0pt; */
+}
+
+.SWDomBusinessPadding {
+    padding-bottom: 200.0px;
+}
+
+.PageTemplateHeader {
+    /*background-image:url("http://www.scottishwater.co.uk/presentation/release-012/spring/images/print-logo.jpg"); 
+  background-repeat: no-repeat; */
+
+    background-image: url("http://www.scottishwater.co.uk/presentation/release-012/spring/images/bkdNav.gif");
+}
+
+.NoTableBorder {
+    border-color: White;
+}
+
+.FooterBackground {
+    background-image: url("/images/bkdFooter.gif");
+    height: 116px;
+    /*170*/
+
+    padding-right: 100px;
+    /*125*/
+
+    padding-left: 100.0px;
+    /*125*/
+    /* width:1280px; */
+    /* for firefox, safari, chrome, etc. */
+    /*-webkit-transform: rotate(-180deg); 
+-moz-transform: rotate(-180deg); */
+    /* for ie 
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); */
+    /*******************************/
+    /*	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg); */
+}
+
+.FooterBackgroundN {
+    background-image: url("/images/bkdFooter.gif");
+    height: 170px;
+    /*170*/
+
+    padding-right: 125px;
+    /*125*/
+
+    padding-left: 125px;
+    /*125*/
+}
+
+af|panelSplitter {
+    -tr-divider-size: 1;
+    background-color: White;
+}
+
+af|panelSplitter::horizontal-divider {
+    -tr-divider-size: 1;
+}
+
+af|panelSplitter.verticalSplitter::vertical-divider {
+    -tr-divider-size: 10;
+}
+af|panelSplitter.verticalSplitter {
+    -tr-divider-size: 10;
+    background-color: White;
+}
+
+.FooterBackgroundReverse {
+    background-image: url("/images/bkdFooter.gif");
+    vertical-align: top;
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /*    height:170.0px; width:1280.0px; */
+}
+
+.FooterBackgroundReverseInside {
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    /*  height:170px; width:1280.0px; */
+}
+
+.subHeader {
+    color: Black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+.invoicesubHeader {
+
+    font-family: Arial;
+
+    font-weight: bold;
+    font-size: 12pt;
+    color: #000000;
+    background-image: none;
+    background-color: White;
+    text-align: left;
+    padding-left: 0px;
+}
+.searchHeaders{
+    font-weight:bold;
+    font-size:10pt;
+    color:#1266AE;
+}
+.groupHeaderDesign{
+    font-weight:bold;
+    font-size:10pt;
+    color:black;
+    
+}
+af|panelGroupLayout.groupDesign{
+    height:30px; 
+    /*width:1680px;*/ 
+    background: -webkit-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(163,190,216), rgb(172,202,229), rgb(138,182,218)); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=1);/* For Internet Explorer*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A3BED8', endColorstr='#8AB6DA',GradientType=0 );/* For Internet Explorer*/
+    
+    height:20px;
+}
+af|commandLink.linkDesign{
+    text-decoration:underline; 
+    font-size:10pt; 
+    color:#3093BD;
+}
+
+af|table.searchTable {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+   -tr-padding-left-width: 10;
+    
+}
+
+
+
+
+
+af|table.searchTable af|column::column-header-cell {
+    background-color:#D2E2F2;
+    background-image: none;
+    background-repeat: repeat;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+   
+    
+}
+
+af|table.searchTable af|column::column-header-cell-content {
+    font-family: Arial;
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+   
+      
+     
+
+}af|table.searchTable af|column::data-cell {
+    font-family: Arial;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #F3F3F6;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    
+    
+}
+
+
+af|table.searchTable af|column::banded-data-cell {
+    font-family: Arial;
+    color: #e6ffff;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #F3F3F6;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+     padding-top: 5px;
+      padding-bottom: 5px;
+     
+}
+
+af|commandButton.cancelSubmitDesign{
+    font-family: Arial;
+   font-weight: bold;
+   font-size: 10pt;
+   background-color:#CCE7ED !important;
+   background-image: none !important;
+   color:black;
+   text-align: left;
+    padding-right:10px;
+    padding-left:10px;
+}
+af|commandButton.cancelSubmitDesign:hover{
+    font-family: Arial;
+   font-weight: bold;
+   font-size: 10pt;
+   background-color:#CCE7ED !important;
+   background-image: none !important;
+   color:black;
+   text-align: left;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.invoiceFormLink {
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color:Blue;
+}
+
+.AFDefaultFontFamily {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 120.0%;
+    color: Black;
+}
+
+.invoiceAFDefaultFontFamily {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    color: Black;
+}
+
+.FooterMainLinksFormat {
+    color: White;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.AppFormTopButtonsRed {
+    border-color: Red;
+    border-width: thick;
+}
+
+.AppFormTopButtonsGreen {
+    border-color: Green;
+    border-width: thick;
+}
+
+.myradio1 label {
+    margin-right: 50.0px;
+    color: #000;
+}
+
+af|commandLink label {
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+af|selectBooleanRadio label {
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    color: Black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+af|panelSplitter.myPanelSplitter {
+    background-color: #CCE7FF;
+    width: 125px;
+    height: auto;
+}
+
+.MenuItemStyle {
+    background: #006fba;
+    color: #fff;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 15px;
+    margin: 0px 0 0 0;
+    padding: 6px 5px 11px 12px;
+    text-decoration: none;
+}
+
+af|panelFormLayout.myFormStyle af|panelLabelAndMessage::label {
+    font-family: Arial;
+    text-align: left;
+    font-size: 16pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+af|panelFormLayout.myFormStyle af|panelLabelAndMessage {
+    font-family: Arial;
+    text-align: left;
+    font-size: 16pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+
+af|panelFormLayout.myFormStyle af|panelLabelAndMessage::content-cell {
+    font-family: Arial;
+    text-align: left;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+af|panelFormLayout.myFormStyle af|panelLabelAndMessage::end-facet {
+    font-family: Arial;
+    text-align: right;
+    font-size: 12pt;
+    color: #000000;
+}
+
+.myFormStyle af|panelLabelAndMessage af|outputText::content {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+af|panelFormLayout.myFormStyle::label-cell {
+    font-family: Arial;
+    text-align: left;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|outputLabel {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.myFormStyle af|outputLabel {
+    font-family: Arial;
+    color: #336fba;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|inputText::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|inputFile::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    padding-left: 0px;
+}
+.myFormStyle af|inputFile::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+.myFormStyle af|inputText::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+.myFormStyle af|outputText::content {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+.myFormStyle af|inputText {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+}
+
+af|inputText.checklistText {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+}
+
+.myFormStyle af|inputFile {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+}
+
+.myFormStyle af|inputDate{
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+}
+
+.myFormStyle af|inputDate::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+
+.myFormStyle af|outputText {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|selectOneChoice::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: rgb(18, 102, 174);
+    border-color: rgb(132, 183, 230);
+    padding-left: 0px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|selectOneRadio::item-text {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+
+af|selectOneRadio.forRegistrationPageSRadio::content-input{
+  
+        vertical-align:bottom;
+}
+
+af|selectOneRadio.forRegistrationPageSRadio::item-text {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+    padding-right: 15px;
+     text-align:center;
+   
+}
+
+
+af|panelLabelAndMessage::end-facet {
+    /* background-image:url("../images/DownArrow.JPG");
+     background-repeat: repeat;*/
+     
+    padding-right: 0px;
+    
+          
+         
+         
+}
+
+
+.myFormStyle af|selectOneChoice::content {
+    font-family: Arial;
+    font-size: 10pt;
+    color: rgb(18, 102, 174);
+    padding-left: 0px;
+}
+
+.myFormStyle af|selectBooleanCheckbox {
+    padding-left: 0px;
+}
+
+.myFormStyle af|selectBooleanCheckbox::label {
+    padding-left: 0px;
+}
+
+.myFormStyle af|selectBooleanCheckbox::content {
+    font-family: Arial;
+    font-size: 12pt;
+    color: #000000;
+    padding-left: 0px;
+    text-align: left;
+}
+
+af|panelGroupLayout.SpacerGroupStyle af|spacer {
+    background-color: #006fba;
+}
+
+af|panelGroupLayout.myGroupStyle {
+    background-color: #1266AE;
+    height: 34px;
+}
+
+.myGroupStyle af|menuBar {
+    background-color: #1266AE;
+    height: 34px;
+   
+}
+
+.header{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #1266AE;
+    background-image: none;
+    background-color: White;
+    text-align: left;
+    /*padding-left: 0px;*/
+}
+
+af|panelHeader::title-text0 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #1266AE;
+    background-image: none;
+    background-color: White;
+    text-align: left;
+    padding-left: 0px;
+}
+
+af|panelHeader.CustPanelHeader::title-text0 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #000000;
+    background-image: none;
+    background-color: White;
+    text-align: left;
+    padding-left: 0px;
+}
+
+af|panelHeader::info {
+    font-family: Arial;
+    font-size: 12pt;
+    text-align: left;
+    padding-left: 0px;
+}
+
+af|panelCollection {
+    border: 0px;
+    width: 100%;
+    background-color: #84B7E6;
+    background-image: none;
+    background-repeat: repeat;
+}
+
+af|panelCollection::header {
+    background-color: #84B7E6;
+    background-image: none;
+    background-repeat: repeat;
+}
+
+af|panelCollection:header-toolbar {
+    background-color: #84B7E6;
+    background-image: none;
+    background-repeat: repeat;
+}
+
+af|panelList {
+    font-family: Arial;
+    color: #1266AE;
+   
+    font-size: 12pt;
+    text-align: left;
+}
+
+
+af|table.myTable {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color:#EBF0F6 !important;
+   -tr-padding-left-width: 10;
+    
+}
+
+/*.AFTableCellPadding:alias {
+  padding-left:10px; 
+   
+}*/
+
+.myHeaderCellStyle {
+  
+  background-color: #84B7E6;
+    background-image: none;
+    background-repeat: repeat;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+     padding-top: 5px;
+      padding-bottom: 5px;
+    /*   padding-left: 10px;*/
+   
+    
+    
+}
+
+
+
+af|table.myTable af|column::column-header-cell {
+    background-color: #84B7E6;
+    background-image: none;
+    background-repeat: repeat;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+   
+    
+}
+
+af|table.myTable af|column::column-header-cell-content {
+    font-family: Arial;
+    color: #1266AE;
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+   
+      
+     
+
+}af|table.myTable af|column::data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #AFD0EF;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    
+    
+}
+
+
+af|table.myTable af|column::banded-data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #C3DCF3;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+     padding-top: 5px;
+      padding-bottom: 5px;
+     
+}
+
+.myGroupStyle af|menuBar af|commandMenuItem{
+     height: 32px;
+      
+}
+
+.myGroupStyle af|menuBar af|commandMenuItem::bar-item {
+    background: #1266AE;
+    
+    
+    margin: 0px 0px 0px 0px;
+      
+}
+
+.myGroupStyle af|menuBar af|commandMenuItem::bar-item-text {
+    color: #DCE0FF;
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 0px 0 0 0;
+   
+   
+    text-decoration: none;
+    font-family: Arial;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.myGroupStyle af|menuBar af|commandMenuItem::bar-item-text:hover {
+    color: #FFFFFF;
+}
+
+.myGroupStyle af|menuBar af|commandMenuItem::bar-item:hover {
+    border-bottom-color: #1266AE;
+    border-left-color: #1266AE;
+    border-right-color: #1266AE;
+    border-top-color: #1266AE;
+}
+
+af|panelSplitter::horizontal-icon-style {
+    background-image: url("../images/DownArrow.JPG");
+    background-color: White;
+}
+
+af|commandMenuItem.myCMBSelected::bar-item-text {
+    color: #ffffff;
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+   
+    text-decoration: none;
+    font-family: Arial;
+    vertical-align: middle;
+    text-align: left;
+    height: 32px;
+}
+
+af|commandMenuItem.myCMB::bar-item-text {
+    color: #DCE0FF;
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+    
+    text-decoration: none;
+    font-family: Arial;
+    vertical-align: middle;
+    text-align: left;
+    height: 32px;
+}
+
+af|commandButton.nextButtonCustom {
+    background-color: #1266AE;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-left: 12px;
+    background-image: none;
+    font-size: 1.0em;
+}
+
+af|commandButton.buttonCustom {
+    background-color: #1266AE;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 12px;
+    background-image: none;
+   /* font-size: 2.0em; 
+   */
+   font-size:medium;
+}
+
+af|commandButton.defaultProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #84B7E6;
+    border-left-style: none;
+    border-right-style: none;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+}
+
+af|commandButton.selectedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #84B7E6;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #000000;
+    background-image: none;
+    padding-left: 0px;
+}
+
+af|commandButton.NotCompletedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF3333;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+}
+
+af|commandButton.CompletedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #33CC33;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+}
+
+/*af|panelTabbed.viewSiteTab::tab {
+    margin-right: 4px;
+}
+
+af|panelTabbed.viewSiteTab::header af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+    background-image: none;
+    background-color: #1266AE;
+}
+
+af|panelTabbed.viewSiteTab::header af|panelTabbed::tab:selected af|panelTabbed::tab-start {
+     background-image: none;
+    background-color: #1266AE;
+}
+
+af|panelTabbed.viewSiteTab::header af|panelTabbed::tab:selected af|panelTabbed::tab-end {
+    background-image: none;
+    background-color: #1266AE;
+}*/
+
+/*
+af|panelTabbed.viewSiteTab::tab-text-link {
+    color: White;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+}*/
+
+
+af|selectOneRadio.for10ptSRadio::item-text {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+
+/*af|panelTabbed::tab{margin:0px;}
+af|panelFormLayout::label-stacked-cell{padding-left:0px;}
+af|panelTabbed::footer, af|panelTabbed::header{background-image: none;}
+af|panelTabbed::header{border-bottom:1px solid #484a4a;}
+af|panelTabbed::tab-content{padding:0px 5px 0px 10px}
+
+af|panelTabbed::tab-start, af|panelTabbed::tab:hover af|panelTabbed::tab-start{background-image:url(/images/tab-start.png);height:40px;background-position:top left;}
+af|panelTabbed::tab-content, af|panelTabbed::tab:hover af|panelTabbed::tab-content{background-image:url(/images/tab-content.png);height:40px;width:auto;background-position:top left;background-repeat:repeat-x;}
+af|panelTabbed::tab-end, af|panelTabbed::tab:hover af|panelTabbed::tab-end{background-image:url(/images/tab-end.png);height:40px;background-position:top left;}
+
+af|panelTabbed::tab.p_AFSelected af|panelTabbed::tab-start, af|panelTabbed::tab.p_AFSelected:hover af|panelTabbed::tab-start{background-image:url(/images/tab-start-selected.png);height:40px;background-position:top left;}
+af|panelTabbed::tab.p_AFSelected af|panelTabbed::tab-content, af|panelTabbed::tab.p_AFSelected:hover af|panelTabbed::tab-content{background-image:url(/images/tab-content-selected.png); background-repeat:repeat-x;height:40px;width:auto;}
+af|panelTabbed::tab.p_AFSelected af|panelTabbed::tab-end, af|panelTabbed::tab.p_AFSelected:hover af|panelTabbed::tab-end{background-image:url(/images/tab-end-selected.png); height:40px;background-position:top left;}
+af|panelTabbed::tab-text-link{color:#fff;}*/
+
+
+
+
+af|showDetail::header-text {
+font-family: Arial;
+    font-size: 12pt;
+    color:#006fba;
+    
+    
+    
+}
+
+
+
+af|panelHeader.CustPanelHeader1::title-text0 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #006fba;
+    background-image: none;
+    background-color: White;
+    text-align: left;
+    padding-left: 15px;
+}
+af|table.tableNoColumnHeaders af|column::column-header-cell 
+{
+    display: none;
+   background-color:Red;
+   background-image: none;
+    background-repeat: repeat;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;    
+}
+af|commandImageLink.myCILink::image{
+   padding: 10px 10px 10px 0px;
+}
+af|selectBooleanCheckbox.forRegistrationPageSCheckbox::content-input{
+  
+        vertical-align:baseline;
+        padding-bottom: 10px;
+}
+
+.invoiceHeader
+{
+  /*font-family:Times New Roman,Arial Black,times, Serif; 
+  font-size:large;
+  font-weight: bold;*/
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 10pt;
+  color: #1266AE;
+  background-image: none;
+  background-color: White;
+  text-align: left;
+  padding-left: 0px;
+}
+.uiHeader
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 12pt;
+   background-color: #1266AE;
+   color:white;
+   text-align: left;
+    padding-right:10px;
+    padding-left:10px;
+    
+        position:relative;
+    z-index: 51;
+}
+
+af|commandButton.searchDesign{
+
+  border:none !important;
+  background:transparent !important;
+   
+    
+    position:absolute;
+   
+}
+
+af|commandButton.buttonDesign{
+font-family: Arial;
+   font-weight: bold;
+   font-size: 10pt;
+   background-color: #1266AE !important;
+   background-image: none !important;
+   color:white;
+   text-align: center;
+    padding-right:10px;
+    padding-left:10px;
+   
+}
+
+
+
+af|commandButton.buttonDesign:hover{
+    font-family: Arial;
+   font-weight: bold;
+   font-size: 10pt;
+   background-color: #1266AE !important;
+   background-image: none !important;
+   color:white;
+   text-align: left;
+    padding-right:10px;
+    padding-left:10px;
+    cursor: pointer !important;
+   
+}
+
+af|commandButton.buttonDesign:active{
+    font-family: Arial;
+   font-weight: bold;
+   font-size: 10pt;
+   background-color: #1266AE !important;
+   background-image: none !important;
+   color:white;
+   text-align: left;
+    padding-right:10px;
+    padding-left:10px;
+    cursor: pointer !important;
+   
+}
+
+
+.labelDesign af|inputText::label{
+
+    font-size:13px;
+    color:black;
+ 
+  
+}
+.stopResize af|inputText::label{
+
+    font-size:13px;
+    color:black;
+ 
+  
+}
+.stopResize af|inputText::content{
+
+    font-size:13px;
+    color:black;
+    resize : none;
+ 
+}
+.x1u.p_AFDisabled .x25
+{
+    background-color: #cccccc !important;
+    color : Black !important; 
+    -webkit-text-fill-color : Black !important;
+}
+.x4z
+{
+    font-size:13px !important;
+    color:black !important;
+}
+
+
+.labelDesign af|selectOneChoice::label{
+
+    font-size:13px !important;
+    color:black !important;
+ 
+  
+}
+.labelDesign af|panelLabelAndMessage::label{
+
+    font-size:13px;
+    color:black;
+ 
+  
+}
+
+.dateDesign af|inputDate::label{
+
+    font-size:13px;
+    color:black;
+ 
+  
+}
+
+.invoiceText
+{
+  font-family: Arial;
+  font-size: 12pt;
+  color: #000000;
+  padding-left: 0px;  
+  
+}
+
+.invoiceTableHeader
+{
+  font-family: Arial;
+  font-size: 12pt;
+  color:Black;
+  padding-left: 0px;   
+}
+
+.invoiceLink
+{
+  color: ActiveCaption;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  text-decoration:underline;
+}
+
+.invoiceFormSection{
+  border-color:#84B7E6; 
+  border-style:ridge;
+  border-width:thin;
+  background-color:#84B7E6;
+  width:18.8cm;
+}
+
+
+
+af|commandLink.defaultProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #84B7E6;
+    border-left-style: none;
+    border-right-style: none;
+    font-family: Arial;
+     font-weight: bold;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+    padding-right: 10px;
+     border-bottom-width: 4px;
+}
+
+af|commandLink.selectedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #84B7E6;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #000000;
+    background-image: none;
+    padding-left: 0px;
+       padding-right: 10px;
+}
+
+af|commandLink.NotCompletedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF3333;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+       padding-right: 10px;
+}
+
+af|commandLink.CompletedProgressButton {
+    background-color: #FFFFFF;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #33CC33;
+    border-bottom-width: 4px;
+    border-left-style: none;
+    border-right-style: none;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    background-image: none;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.myFormStyle af|panelLabelAndMessage af|selectBooleanRadio::item-text {
+    font-family: Arial;
+    font-size: 10pt;
+    color: #000000;
+   
+    padding-left: 0px;
+    /*padding-right: 10px;*/
+}
+
+
+
+
+af|table.tableNoColumnHeaders af|column::column-header-cell-content {
+    font-family: Arial;
+    color: #1266AE;
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    background-color: #AFD0EF;   
+     
+
+}
+
+af|table.tableNoColumnHeaders af|column::data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #AFD0EF;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    
+    
+}
+
+af|table.tableNoColumnHeaders af|column::banded-data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #C3DCF3;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+     padding-top: 5px;
+      padding-bottom: 5px;
+     
+}
+.blankHeader{
+    
+       visibility: hidden;
+     
+}
+
+
+af|table.myTable1 af|column::column-header-cell {
+    background-color: #1266AE;
+    background-image: none;
+    background-repeat: repeat;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;      
+}
+
+af|table.myTable1 af|column::column-header-cell-content {
+    font-family: Arial;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+        
+
+}
+af|table.myTable1 af|column::data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #D3D3D3;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    
+}
+
+
+af|table.myTable1 af|column::banded-data-cell {
+    font-family: Arial;
+    color: #000000;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #80B3FF;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+}
+
+af|panelFormLayout.myFormStyle af|tree::node-stamp-text {
+border-width: 0px;
+}
+.textcolor af|inputText::content {
+         background-color: red;
+}
+
+ 
+af|commandButton.customLink {
+background-color: #1266AE;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+text-align: left;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+font-weight: bold;
+padding-left: 10px;
+background-repeat: no-repeat;
+background-image: none;
+}
+
+af|commandButton.customLink:hover {
+background-color: #6699CC;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+font-weight: bold;
+padding-left: 10px; 
+background-repeat: no-repeat;
+background-image: none;
+
+}
+
+
+af|commandButton.customLink:disabled {
+background-color: #1266AE;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+af|commandButton.customLink:disabled:hover {
+background-color: #6699CC;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+af|commandButton.customLink:active {
+background-color: #6699CC;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+
+af|commandButton.customLink:focus {
+background-color: #6699CC;
+height: 30px;
+width: 150px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+af|panelGroupLayout.myGroupTabMenuStyle {
+    background-color: #1266AE;
+    height: 26px;
+    width: 150px;
+}
+
+af|commandButton.customLinkCT {
+background-color: #1266AE;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+text-align: left;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+font-weight: bold;
+padding-left: 10px;
+background-repeat: no-repeat;
+background-image: none;
+}
+
+af|commandButton.customLinkCT:hover {
+background-color: #6699CC;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+font-weight: bold;
+padding-left: 10px; 
+background-repeat: no-repeat;
+background-image: none;
+
+}
+
+
+af|commandButton.customLinkCT:disabled {
+background-color: #1266AE;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+af|commandButton.customLinkCT:disabled:hover {
+background-color: #6699CC;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+af|commandButton.customLinkCT:active {
+background-color: #6699CC;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+/*padding: 10px 50px 10px 10px;*/
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+
+af|commandButton.customLinkCT:focus {
+background-color: #6699CC;
+height: 30px;
+width: 330px;
+font-family: Arial;
+color: #ffffff;
+font-style: normal;
+text-decoration: none;
+font-size: 10pt;
+padding-left: 10px;
+font-weight: bold;
+text-align: left;
+background-repeat: no-repeat;
+background-image: none;
+}
+
+af|table.invoiceTable {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+   -tr-padding-left-width: 10;  
+}
+
+af|table.invoiceTable af|column::column-header-cell {
+    background-color: White;
+    background-image: none;
+    background-repeat: repeat;
+    border-color:#C3DCF3;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+af|table.invoiceTable af|column::column-header-cell-content {
+    font-family: Arial;
+    color:Black;
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: #C3DCF3;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+af|table.invoiceTable af|column::data-cell {
+    font-family: Arial;
+    color:Black;
+    font-style: normal;
+    text-decoration: none;
+    background-color:White ;
+    font-size: 10pt;
+    border-color:#AFD0EF;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+af|table.invoiceTable af|column::banded-data-cell {
+    font-family: Arial;
+    color:Black;
+    font-style: normal;
+    text-decoration: none;
+    background-color: White;
+    font-size: 10pt;
+    border-color: White;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+af|commandImageLink.imagelinkDesign::text {
+    font-size:13px; 
+    color:#3093BD;
+
+    
+}
+
+/*panel styretch layout background image*/
+af|panelStretchLayout.stretchDesign{
+    background-image: url("/Images/headerBg.jpg") !important;
+}
+
+.xgw{
+    background-image: url("../Images/calender2.png") !important;
+    padding-right:20px !important;
+}
+
+.xgw:hover{
+    background-image: url("../Images/calender2.png") !important;
+    padding-right:20px !important;
+}
+
+/*pagination Css*/
+/*.xzv {
+    color: #1266AE !important;
+    vertical-align: middle;
+    white-space: nowrap;
+   /* padding-left: 4px;*/
+    font-weight:bold;
+ }*/
+
+.tablePaginationSkinStyle af|table::navbar{
+ float:right !important;
+}
+
+.x1o {
+    border: 0px;
+    background-color: #ffffff;
+    padding: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 480px; !important
+}

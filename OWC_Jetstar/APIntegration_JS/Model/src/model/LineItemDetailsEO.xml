@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LineItemDetailsEO"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="JS_AP_LINEITEM_TABLE"
+  AliasName="LineItemDetailsEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="model.LineItemDetailsEOImpl">
+  <DesignTime>
+    <AttrArray Name="_publishEvents"/>
+    <Attr Name="_codeGenFlag2" Value="DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="InvoiceId"
+    Precision="15"
+    Scale="0"
+    ColumnName="INVOICE_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="16"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineNumber"
+    Precision="15"
+    Scale="0"
+    ColumnName="LINE_NUMBER"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="16"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineType"
+    Precision="25"
+    ColumnName="LINE_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LinePoNum"
+    Precision="25"
+    ColumnName="LINE_PO_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PoLineNum"
+    Precision="25"
+    ColumnName="PO_LINE_NUM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineDescription"
+    Precision="300"
+    ColumnName="LINE_DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Quantity"
+    ColumnName="QUANTITY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Uom"
+    Precision="25"
+    ColumnName="UOM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UnitPrice"
+    ColumnName="UNIT_PRICE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineTotalAmount"
+    ColumnName="LINE_TOTAL_AMOUNT"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaxRate"
+    ColumnName="TAX_RATE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaxRateCode"
+    Precision="25"
+    ColumnName="TAX_RATE_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjectNo"
+    Precision="25"
+    ColumnName="PROJECT_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaskNo"
+    Precision="25"
+    ColumnName="TASK_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ExpinditureOrg"
+    Precision="100"
+    ColumnName="EXPINDITURE_ORG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ExpenditureDate"
+    ColumnName="EXPENDITURE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GlNo"
+    Precision="100"
+    ColumnName="GL_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr2"
+    Precision="200"
+    ColumnName="ATTR2"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr3"
+    Precision="25"
+    ColumnName="ATTR3"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr4"
+    Precision="25"
+    ColumnName="ATTR4"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr5"
+    Precision="25"
+    ColumnName="ATTR5"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr6"
+    Precision="25"
+    ColumnName="ATTR6"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr7"
+    Precision="25"
+    ColumnName="ATTR7"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr8"
+    Precision="25"
+    ColumnName="ATTR8"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Attr9"
+    Precision="25"
+    ColumnName="ATTR9"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE"
+    IsUpdateable="while_insert"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("LINE_ID_SEQ",adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Attribute
+    Name="Attr10"
+    Precision="200"
+    ColumnName="ATTR10"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaxAmountLineitem"
+    Precision="100"
+    ColumnName="TAX_AMOUNT_LINEITEM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WhtCode"
+    Precision="100"
+    ColumnName="WHT_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JS_AP_LINEITEM_TABLE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="HeaderDetailsEO"
+    Association="model.ApLineitemTableApInvoFk1Assoc"
+    AssociationEnd="model.ApLineitemTableApInvoFk1Assoc.HeaderDetailsEO"
+    AssociationOtherEnd="model.ApLineitemTableApInvoFk1Assoc.LineItemDetailsEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="LineitemdetailseoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LINEITEMDETAILSEO_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.LineItemDetailsEO.Attr9"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ApLineitemTableApInvoFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="AP_INVOICE_TABLE_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="AP_LINEITEM_TABLE_AP_INVO_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.LineItemDetailsEO.InvoiceId"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

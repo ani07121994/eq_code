@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
+          id="CertifierHTPayloadType" Package="APIntegrationPrjUI_CertifierHT"
+          BeanClass="APIntegrationPrjUI_CertifierHT.CertifierHTPayloadType"
+          isJavaBased="false">
+  <AccessorAttribute id="EBSErrorImport" IsCollection="true"
+                     BeanClass="APIntegrationPrjUI_CertifierHT.EBSErrorImport"
+                     CollectionBeanClass="APIntegrationPrjUI_CertifierHT.EBSErrorImport_EBSErrorImport_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace" Value="http://www.FlexData.org"/>
+      <Property Name="nextSibling" Value="FlexData"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="EBS Error Import"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="EBSErrorImport"/>
+      <Property Name="targetNamespace" Value="www.EBSError.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="FlexData" IsCollection="true"
+                     BeanClass="APIntegrationPrjUI_CertifierHT.FlexData"
+                     CollectionBeanClass="APIntegrationPrjUI_CertifierHT.FlexData_FlexData_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Flex Data"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="FlexData"/>
+      <Property Name="targetNamespace" Value="http://www.FlexData.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

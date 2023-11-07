@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
+          id="APOperationTeamPayloadType"
+          Package="APIntegrationPrjUI_APOperationTeam"
+          BeanClass="APIntegrationPrjUI_APOperationTeam.APOperationTeamPayloadType"
+          isJavaBased="false">
+  <Attribute Name="Status" Type="java.lang.String" PrecisionRule="false"
+             Precision="0" Scale="0">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Status"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="Status"/>
+        <Property Name="targetNamespace"
+                  Value="http://xmlns.oracle.com/bpel/workflow/task"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="FlexData" IsCollection="true"
+                     BeanClass="APIntegrationPrjUI_APOperationTeam.FlexData"
+                     CollectionBeanClass="APIntegrationPrjUI_APOperationTeam.FlexData_FlexData_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace" Value="www.EBSError.org"/>
+      <Property Name="nextSibling" Value="EBSErrorImport"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Flex Data"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="FlexData"/>
+      <Property Name="targetNamespace" Value="http://www.FlexData.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="EBSErrorImport" IsCollection="true"
+                     BeanClass="APIntegrationPrjUI_APOperationTeam.EBSErrorImport"
+                     CollectionBeanClass="APIntegrationPrjUI_APOperationTeam.EBSErrorImport_EBSErrorImport_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="EBS Error Import"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="EBSErrorImport"/>
+      <Property Name="targetNamespace" Value="www.EBSError.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

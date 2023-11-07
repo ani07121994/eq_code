@@ -1,0 +1,27 @@
+<WL5G3N0:definitions
+     name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE-concrete"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+     xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+    >
+    <WL5G3N0:import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/JetstarOsb/JetStarOsbApp/JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"
+         location="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE.wsdl"/>
+    <WL5G3N0:binding name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_ptt-binding" type="WL5G3N1:JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_ptt">
+        <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <WL5G3N0:operation name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE">
+            <WL5G3N2:operation soapAction="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE"/>
+            <WL5G3N0:input>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:input>
+            <WL5G3N0:output>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:output>
+        </WL5G3N0:operation>
+    </WL5G3N0:binding>
+    <WL5G3N0:service name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE-service">
+        <WL5G3N0:port name="JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE-port" binding="WL5G3N1:JSEQ_AP_INV_IMG_PROCESS_AUTO_POPULATE_ptt-binding">
+            <WL5G3N2:address location="http://eqosbpspnew.qantas.com.au/JetStarService/ProxyService/JETSTAR_AUTO_POPULATE"/>
+        </WL5G3N0:port>
+    </WL5G3N0:service>
+</WL5G3N0:definitions>

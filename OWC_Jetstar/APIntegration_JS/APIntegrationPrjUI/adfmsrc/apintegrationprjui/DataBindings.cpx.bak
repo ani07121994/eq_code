@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.65.57" id="DataBindings" SeparateXMLFiles="false"
+             Package="apintegrationprjui" ClientType="Generic">
+  <pageMap>
+    <page path="/APTask.jspx" usageId="apintegrationprjui_APTaskPageDef"/>
+    <page path="/apOperationUI.jspx"
+          usageId="apintegrationprjui_apOperationUIPageDef"/>
+    <page path="/certifierUI.jspx"
+          usageId="apintegrationprjui_certifierUIPageDef"/>
+    <page path="/WEB-INF/APOperationTeam_TaskFlow.xml#APOperationTeam_TaskFlow@executeHeaderLineItemDetails"
+          usageId="apintegrationprjui_APOperationTeam_TaskFlow_APOperationTeam_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page path="/WEB-INF/CertifierHT_TaskFlow.xml#CertifierHT_TaskFlow@executeHeaderLineItemDetails"
+          usageId="apintegrationprjui_CertifierHT_TaskFlow_CertifierHT_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page path="/WEB-INF/RejectorHT_TaskFlow.xml#RejectorHT_TaskFlow@executeHeaderLineItemDetails"
+          usageId="apintegrationprjui_RejectorHT_TaskFlow_RejectorHT_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page path="/EmailPage.jspx" usageId="apintegrationprjui_EmailPagePageDef"/>
+    <page path="/auditTableView.jspx" usageId="apintegrationprjui_auditPagePageDef"/>
+    <page path="/WEB-INF/AuditHT_TaskFlow.xml#AuditHT_TaskFlow@showAuditDetails"
+          usageId="apintegrationprjui_AuditHT_TaskFlow_AuditHT_TaskFlow_showAuditDetailsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="apintegrationprjui_APTaskPageDef"
+          path="apintegrationprjui.pageDefs.APTaskPageDef"/>
+    <page id="apintegrationprjui_apOperationUIPageDef"
+          path="apintegrationprjui.pageDefs.apOperationUIPageDef"/>
+    <page id="apintegrationprjui_certifierUIPageDef"
+          path="apintegrationprjui.pageDefs.certifierUIPageDef"/>
+    <page id="apintegrationprjui_APOperationTeam_TaskFlow_APOperationTeam_TaskFlow_executeHeaderLineItemDetailsPageDef"
+          path="apintegrationprjui.pageDefs.APOperationTeam_TaskFlow_APOperationTeam_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page id="apintegrationprjui_CertifierHT_TaskFlow_CertifierHT_TaskFlow_executeHeaderLineItemDetailsPageDef"
+          path="apintegrationprjui.pageDefs.CertifierHT_TaskFlow_CertifierHT_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page id="apintegrationprjui_RejectorHT_TaskFlow_RejectorHT_TaskFlow_executeHeaderLineItemDetailsPageDef"
+          path="apintegrationprjui.pageDefs.RejectorHT_TaskFlow_RejectorHT_TaskFlow_executeHeaderLineItemDetailsPageDef"/>
+    <page id="apintegrationprjui_EmailPagePageDef"
+          path="apintegrationprjui.pageDefs.EmailPagePageDef"/>
+    <page id="apintegrationprjui_auditPagePageDef"
+          path="apintegrationprjui.pageDefs.auditPagePageDef"/>
+    <page id="apintegrationprjui_AuditHT_TaskFlow_AuditHT_TaskFlow_showAuditDetailsPageDef"
+          path="apintegrationprjui.pageDefs.AuditHT_TaskFlow_AuditHT_TaskFlow_showAuditDetailsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="APIntegrationPrjUI_CertifierHT"
+        path="apintegrationprjui.APIntegrationPrjUI_CertifierHT"/>
+    <dc id="APIntegrationPrjUI_APOperationTeam"
+        path="apintegrationprjui.APIntegrationPrjUI_APOperationTeam"/>
+    <BC4JDataControl id="APOperationAMDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="APOperationAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="EbsAMDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="EbsAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
