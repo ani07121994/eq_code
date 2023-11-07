@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.65.57" id="DataControls"
+                    Package="apintegrationprjui">
+  <AdapterDataControl id="APIntegrationPrjUI_APOperationTeam"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.bpel.services.datacontrol.XSDDataControlDefinition"
+                      SupportsTransactions="true" SupportsSortCollection="false"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false"
+                      Definition="APIntegrationPrjUI_APOperationTeam"
+                      BeanClass="APIntegrationPrjUI_APOperationTeam"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <XSDDataControl xmlns="http://xmlns.oracle.com/bpel/workflow/task"
+                      SchemaLocation="file:/D:/santha/workplace/adf/SVN/APIntegrationApp-17-Oct/APIntegrationPrjUI/../APIntegrationPrj/xsd/APOperationTeamWorkflowTask.xsd"
+                      RootElement="task"
+                      rootelementnamespace="http://xmlns.oracle.com/bpel/workflow/task"
+                      taskLoc="../APIntegrationPrj/APOperationTeam.task"
+                      InitiationTask="false"
+                      DocumentStoreConfiguration="false"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="APIntegrationPrjUI_CertifierHT"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.bpel.services.datacontrol.XSDDataControlDefinition"
+                      SupportsTransactions="true" SupportsSortCollection="false"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false"
+                      Definition="APIntegrationPrjUI_CertifierHT"
+                      BeanClass="APIntegrationPrjUI_CertifierHT"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <XSDDataControl xmlns="http://xmlns.oracle.com/bpel/workflow/task"
+                      SchemaLocation="file:/C:/JDeveloper/APIntegrationWP/APIntegrationApp/APIntegrationPrj/xsd/CertifierHTWorkflowTask.xsd"
+                      RootElement="task"
+                      rootelementnamespace="http://xmlns.oracle.com/bpel/workflow/task"
+                      taskLoc="../APIntegrationPrj/CertifierHT.task"
+                      InitiationTask="false"
+                      DocumentStoreConfiguration="false"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="APIntegrationPrjUI_RejectorHT"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.bpel.services.datacontrol.XSDDataControlDefinition"
+                      SupportsTransactions="true" SupportsSortCollection="false"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false"
+                      Definition="APIntegrationPrjUI_RejectorHT"
+                      BeanClass="APIntegrationPrjUI_RejectorHT"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <XSDDataControl xmlns="http://xmlns.oracle.com/bpel/workflow/task"
+                      SchemaLocation="file:/C:/JDeveloper/APIntegrationWP/APIntegrationApp/APIntegrationPrj/xsd/RejectorHTWorkflowTask.xsd"
+                      RootElement="task"
+                      rootelementnamespace="http://xmlns.oracle.com/bpel/workflow/task"
+                      taskLoc="../APIntegrationPrj/RejectorHT.task"
+                      InitiationTask="false"
+                      DocumentStoreConfiguration="false"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="AuditBean"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ap.quantas.com.AuditBean"
+                      BeanClass="ap.quantas.com.AuditBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="ap.quantas.com.AuditBean"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="ap.quantas.com.AuditBean"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.EBSError.org"
+            targetNamespace="www.EBSError.org"
+            elementFormDefault="qualified">
+  <xsd:element name="EBSErrorImport">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ErrorHeader" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="errorCode" type="xsd:string"/>
+              <xsd:element name="errorType" type="xsd:string"/>
+              <xsd:element name="lineNumber" type="xsd:string"/>
+              <xsd:element name="detailError" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+       </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

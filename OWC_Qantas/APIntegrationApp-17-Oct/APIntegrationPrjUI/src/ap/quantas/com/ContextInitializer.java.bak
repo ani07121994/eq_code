@@ -1,0 +1,63 @@
+package ap.quantas.com;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import model.APOperationAMImpl;
+import model.EbsAMImpl;
+
+import model.common.APOperationAM;
+
+import oracle.jbo.ApplicationModule;
+import oracle.jbo.Row;
+import oracle.jbo.RowSetIterator;
+import oracle.jbo.client.Configuration;
+import oracle.jbo.server.ViewObjectImpl;
+
+public class ContextInitializer implements ServletContextListener {
+    public ContextInitializer() {
+        super();
+    }
+
+    public void contextInitialized(ServletContextEvent servletContextEvent) {
+        System.out.println("Context Initialized during deployment");
+        
+        System.out.println("--- loading properties ---");
+        
+        ApplicationModule am = null;
+        try {
+            String amDef = "model.APOperationAM";
+            String config = "APOperationAMLocal";
+            am = Configuration.createRootApplicationModule(amDef, config);
+            APOperationAMImpl eqfilesDB = (APOperationAMImpl)am;
+            
+            ViewObjectImpl vo = eqfilesDB.getPropertyTableVO1();
+            RowSetIterator rowsetIt = vo.createRowSetIterator(null);
+            while(rowsetIt.hasNext()) {
+                Row row = rowsetIt.next();
+                PropertyLoader.getInstance().addProperty((String)row.getAttribute("Name"), (String)row.getAttribute("Value"));
+            }
+            
+        } catch(Exception ex) {
+           ex.printStackTrace(); 
+        } finally {
+            if(am!=null) {
+                try {
+                    Configuration.releaseRootApplicationModule(am, true);
+                } catch(Exception ex1) {
+                    ex1.printStackTrace(); 
+                }
+            }
+        }
+            
+            
+        
+        System.out.println(PropertyLoader.getInstance().getProperty("IMAGE_URL"));
+        
+        System.out.println("--- properties loaded ---");
+        
+    }
+
+    public void contextDestroyed(ServletContextEvent servletContextEvent) {
+    }
+}

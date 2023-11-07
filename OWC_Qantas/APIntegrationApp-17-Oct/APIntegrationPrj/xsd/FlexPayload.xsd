@@ -1,0 +1,32 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://www.FlexData.org"
+            targetNamespace="http://www.FlexData.org"
+            elementFormDefault="qualified">
+  <xsd:element name="FlexData">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="FlexInfo">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="invoiceID" type="xsd:string"/>
+              <xsd:element name="reasonCode" type="xsd:string"/>
+              <xsd:element name="reasonType" type="xsd:string"/>
+              <xsd:element name="invoiceNumber" type="xsd:string"/>
+              <xsd:element name="supplierName" type="xsd:string"/>
+              <xsd:element name="status" type="xsd:string"/>
+              <xsd:element name="priority" type="xsd:string"/>
+              <xsd:element name="attr1" type="xsd:string"/>
+              <xsd:element name="attr2" type="xsd:string"/>
+              <xsd:element name="attr3" type="xsd:string"/>
+              <xsd:element name="attr4" type="xsd:string"/>
+              <xsd:element name="attr5" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+
+
+

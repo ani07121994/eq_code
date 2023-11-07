@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
+          id="EBSErrorImport" Package="APIntegrationPrjUI_CertifierHT"
+          BeanClass="APIntegrationPrjUI_CertifierHT.EBSErrorImport"
+          isJavaBased="false">
+  <AccessorAttribute id="ErrorHeader" IsCollection="true"
+                     BeanClass="APIntegrationPrjUI_CertifierHT.ErrorHeader"
+                     CollectionBeanClass="APIntegrationPrjUI_CertifierHT.ErrorHeader_ErrorHeader_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="2147483640"/>
+      <Property Name="LABEL" Value="Error Header"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="ErrorHeader"/>
+      <Property Name="targetNamespace" Value="www.EBSError.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

@@ -1,0 +1,17 @@
+<Actions xmlns="http://xmlns.oracle.com/bpm/analytics/measurementV20">
+   <compositeDN>APIntegrationPrj</compositeDN>
+   <action name="BAMCommand" enabled="false">
+      <interfaceName>oracle.bpm.analytics.bam.action.BAMActionMDB</interfaceName>
+      <properties>
+         <property name="DataObjectPath">/Samples/Monitor Express</property>
+         <property name="CachedConnections">false</property>
+         <property name="BAMDeploymentUseHTTPS">false</property>
+         <property name="InBatch">false</property>
+      </properties>
+      <measurementElementName>APIntegrationPrj</measurementElementName>
+   </action>
+   <action name="ProcessMetrics" enabled="true">
+      <interfaceName>oracle.bpm.analytics.beam.action.BeamActionMDB</interfaceName>
+      <measurementElementName>APIntegrationPrj</measurementElementName>
+   </action>
+</Actions>

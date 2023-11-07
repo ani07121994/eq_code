@@ -1,0 +1,140 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/TransactionService" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/TransactionService" elementFormDefault="qualified">
+   <element name="InputParameters">
+      <complexType>
+         <sequence>
+            <element name="IO_INV_HEADER" type="db:EQFILES.QFEQAP_INV_HEADER_OBJ" db:index="1" db:type="Struct" minOccurs="0" nillable="true"/>
+            <element name="IO_INV_LINE" type="db:EQFILES.QFEQAP_INV_LINE_TAB" db:index="2" db:type="Array" minOccurs="0" nillable="true"/>
+            <element name="IO_INVOICE_ID" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="I_TRANSACTION_TYPE" type="string" db:index="4" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <element name="OutputParameters">
+      <complexType>
+         <sequence>
+            <element name="IO_INV_HEADER" type="db:EQFILES.QFEQAP_INV_HEADER_OBJ" db:index="1" db:type="Struct" minOccurs="0" nillable="true"/>
+            <element name="IO_INV_LINE" type="db:EQFILES.QFEQAP_INV_LINE_TAB" db:index="2" db:type="Array" minOccurs="0" nillable="true"/>
+            <element name="IO_INVOICE_ID" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="O_STATUS" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="O_MESSAGE" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         </sequence>
+      </complexType>
+   </element>
+   <complexType name="EQFILES.QFEQAP_INV_LINE_OBJ">
+      <sequence>
+         <element name="INVOICE_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="LINE_NUMBER" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="LINE_TYPE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="LINE_PO_NUM" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PO_LINE_NUM" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="LINE_DESCRIPTION" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="QUANTITY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="UOM" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="UNIT_PRICE" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="LINE_TOTAL_AMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="TAX_RATE" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="TAX_RATE_CODE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PROJECT_NO" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TASK_NO" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EXPINDITURE_ORG" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EXPENDITURE_DATE" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="GL_NO" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR1" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR2" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR3" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR4" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR5" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR6" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR7" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR8" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR9" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR10" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="EQFILES.QFEQAP_INV_HEADER_OBJ">
+      <sequence>
+         <element name="INVOICE_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="MODIFIED_ON" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="MODIFIED_BY" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIER_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIER_NAME" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SUPPLIER_NUMBER" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="SITE_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="PO_NUMBER" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TAX_AMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="WITHHOLDING_TAX" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="INVOICE_DATE" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="CANCELLED_DATE" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="CANCELLED_BY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="PROJECT_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="INTERNAL_STATUS" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_CANCEL_BY" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_CANCEL_ON" type="dateTime" db:type="DATE" minOccurs="0" nillable="true"/>
+         <element name="ALTERNATE_APPROVER" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="DOCUMENT_TYPE" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICE_TYPE" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="IMAGE_URL" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ORG_ID" type="db:string35" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICE_NUMBER" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="SITE_NAME" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="TAX_REG_NUMBER" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="INVOICE_TOT_AMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="CURRENCY_CODE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_NAME" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="EMPLOYEE_NUMBER" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_EMAIL_ADD" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVALID_REASON" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVALID_CODE" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PO_TYPE" type="db:string35" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVOICE_PAYLOAD" type="string" db:type="CLOB" minOccurs="0" nillable="true"/>
+         <element name="INVALID_REASON_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="INVALID_REASON_TYPE" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="INVALID_REASON_TYPE_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="DOC_ID" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="PRIORITY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="STATUS" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="AP_OPERATION_COMMENTS" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_REJ_REASON" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_REJ_COMMENTS" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_REASSIGN_TO" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_REASSIGN_COMMENTS" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_APPROVE_COMMENTS" type="db:string100" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="CERTIFIER_BY" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+         <element name="ATTR1" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR2" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR3" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR4" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR5" type="db:string25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR6" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR7" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR8" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR9" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+         <element name="ATTR10" type="db:string50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+   </complexType>
+   <complexType name="EQFILES.QFEQAP_INV_LINE_TAB">
+      <sequence>
+         <element name="IO_INV_LINE_ITEM" type="db:EQFILES.QFEQAP_INV_LINE_OBJ" db:type="Struct" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      </sequence>
+   </complexType>
+   <simpleType name="string50">
+      <restriction base="string">
+         <maxLength value="50"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string25">
+      <restriction base="string">
+         <maxLength value="25"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string35">
+      <restriction base="string">
+         <maxLength value="35"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="string100">
+      <restriction base="string">
+         <maxLength value="100"/>
+      </restriction>
+   </simpleType>
+</schema>

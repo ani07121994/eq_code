@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/masterTemplate.jspx" id="pt1">
+          <f:facet name="center">
+          <af:panelGroupLayout  styleClass="AFStretchWidth">
+            <af:table value="#{bindings.AuditTableVO1.collectionModel}"
+                      var="row" rows="#{bindings.AuditTableVO1.rangeSize}"
+                      emptyText="#{bindings.AuditTableVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      fetchSize="#{bindings.AuditTableVO1.rangeSize}"
+                      rowBandingInterval="1" id="t1"
+                      styleClass="myTable1 AFStretchWidth" autoHeightRows="15"
+                      binding="#{AuditBean.auditTable}" rowSelection="single">
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoiceId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoiceId.label}"
+                         id="c11">
+                <af:outputText value="#{row.InvoiceId}" id="ot18"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.ModifiedOn.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.ModifiedOn.label}"
+                         id="c9">
+                <af:outputText value="#{row.ModifiedOn}" id="ot56">
+                  <af:convertDateTime pattern="#{bindings.AuditTableVO1.hints.ModifiedOn.format}"/>
+                </af:outputText>
+              </af:column>-->
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoiceNumber.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoiceNumber.label}"
+                         id="c44" width="125">
+                <af:outputText value="#{row.InvoiceNumber}" id="ot31"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.DocumentType.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.DocumentType.label}"
+                         id="c6" width="125">
+                <af:outputText value="#{row.DocumentType}" id="ot47"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoiceType.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoiceType.label}"
+                         id="c40" width="125">
+                <af:outputText value="#{row.InvoiceType}" id="ot30"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.SupplierName.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.SupplierName.label}"
+                         id="c8" width="125">
+                <af:outputText value="#{row.SupplierName}" id="ot49"/>
+              </af:column>
+                <af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoiceTotAmount.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoiceTotAmount.label}"
+                         id="c46" width="125">
+                <af:outputText value="#{row.InvoiceTotAmount}" id="ot58"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.ModifiedBy.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.ModifiedBy.label}"
+                         id="c52" width="125">
+                <af:outputText value="#{row.ModifiedBy}" id="ot8"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.InvalidCode.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvalidCode.label}"
+                         id="c21" width="125">
+                <af:outputText value="#{row.InvalidCode}" id="ot38"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.InvalidReasonType.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvalidReasonType.label}"
+                         id="c37" width="125">
+                <af:outputText value="#{row.InvalidReasonType}" id="ot39"/>
+              </af:column>
+               <af:column sortProperty="#{bindings.AuditTableVO1.hints.InternalStatus.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InternalStatus.label}"
+                         id="c49" width="250">
+                <af:outputText value="#{row.InternalStatus}" id="ot17"/>
+              </af:column>
+               <af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierName.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierName.label}"
+                         id="c55" width="125">
+                <af:outputText value="#{row.CertifierName}" id="ot23"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierApproveComments.name}"
+                         sortable="false" 
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierApproveComments.label}"
+                         id="c12" width="250">
+               <af:panelLabelAndMessage id="plam3" for="ot1">                                             
+                      <f:facet name="end">
+                        <af:commandImageLink id="cil3" icon="/Images/comment.png"
+                                          inlineStyle="background-image:none;border:none;"
+                                          partialSubmit="true" 
+                                          actionListener="#{AuditBean.onCertifierApproveCommentsClick}"
+                                          visible="#{AuditBean.approveCommentFlag}"/>                                             
+                      </f:facet>
+                    <!--<af:inputText value="#{row.bindings.CertifierApproveComments.inputValue}"
+                                  simple="true"
+                                  required="#{bindings.AuditTableVO1.hints.CertifierApproveComments.mandatory}"
+                                  columns="#{bindings.AuditTableVO1.hints.CertifierApproveComments.displayWidth}"
+                                  maximumLength="#{bindings.AuditTableVO1.hints.CertifierApproveComments.precision}"
+                                  shortDesc="#{bindings.AuditTableVO1.hints.CertifierApproveComments.tooltip}"
+                                  id="it2"  contentStyle="width:130px;font-size:13px;">
+                      <f:validator binding="#{row.bindings.CertifierApproveComments.validator}"/>
+                    </af:inputText>-->
+                    <af:outputText value="#{row.CertifierApproveComments}"
+                                   id="ot1" truncateAt="40"
+                                   inlineStyle="width:150px;font-size:13px;white-space:normal;"                                   
+                                   binding="#{AuditBean.approveComments}"/>
+                  </af:panelLabelAndMessage>
+                  <!--<af:panelGroupLayout id="pgl2" layout="horizontal"
+                                       styleClass="AFStretchWidth">
+                    <af:panelGroupLayout id="pgl3" halign="left"
+                                         >
+                    <af:outputText value="#{row.CertifierApproveComments}"
+                                   id="ot1"
+                                   inlineStyle="width:150px;font-size:13px;"
+                                   truncateAt="40"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl4" halign="right"
+                                         >
+                    <af:commandImageLink id="cil3" icon="/Images/comment.png"
+                                          inlineStyle="background-image:none;border:none;"
+                                          partialSubmit="true"
+                                          actionListener="#{AuditBean.onCertifierApproveCommentsClick}"
+                                          visible="#{not empty row.CertifierApproveComments}"/> 
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>-->
+                  
+                </af:column>
+                
+                <af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierRejComments.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierRejComments.label}"
+                         id="c25" width="250">
+                   <af:panelLabelAndMessage id="plam1" for="ot2">                                             
+                      <f:facet name="end">
+                        <af:commandImageLink id="cil1" icon="/Images/comment.png"
+                                          inlineStyle="background-image:none;border:none;"
+                                          partialSubmit="true" 
+                                          visible="#{AuditBean.rejectionCommentFlag}"
+                                          actionListener="#{AuditBean.onCertifierRejectionCommentsClick}"/>
+                                                                                      
+                      </f:facet>
+                    <!--<af:inputText value="#{row.bindings.CertifierRejComments.inputValue}"
+                                  simple="true" disabled="true"
+                                  required="#{bindings.AuditTableVO1.hints.CertifierRejComments.mandatory}"
+                                  columns="#{bindings.AuditTableVO1.hints.CertifierRejComments.displayWidth}"
+                                  maximumLength="#{bindings.AuditTableVO1.hints.CertifierRejComments.precision}"
+                                  shortDesc="#{bindings.AuditTableVO1.hints.CertifierRejComments.tooltip}"
+                                  id="it3" >
+                                  
+                      <f:validator binding="#{row.bindings.CertifierRejComments.validator}"/>
+                    </af:inputText>-->
+                    <af:outputText value="#{row.CertifierRejComments}" truncateAt="40"
+                                    inlineStyle="width:150px;font-size:13px;white-space:normal;"
+                                    binding="#{AuditBean.rejectionComments}"
+                                   id="ot2" />
+                  </af:panelLabelAndMessage>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.AlternateApprover.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.AlternateApprover.label}"
+                         id="c43" width="150">
+                <af:outputText value="#{row.AlternateApprover}" id="ot54"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.LastUpdatedDate.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.LastUpdatedDate.label}"
+                         id="c39" width="0">
+                <af:outputText value="#{row.LastUpdatedDate}" id="ot37">
+                  <af:convertDateTime pattern="#{bindings.AuditTableVO1.hints.LastUpdatedDate.format}"/>
+                </af:outputText>
+              </af:column>
+              <af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr6.name}"
+                         sortable="false"
+                         headerText="Scan Date"
+                         id="c26" width="150">
+                <af:outputText value="#{row.Attr6}" id="ot53"/>
+              </af:column>
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.SupplierId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.SupplierId.label}"
+                         id="c42">
+                <af:outputText value="#{row.SupplierId}" id="ot22"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.SupplierNumber.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.SupplierNumber.label}"
+                         id="c54">
+                <af:outputText value="#{row.SupplierNumber}" id="ot26"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.SiteId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.SiteId.label}"
+                         id="c41">
+                <af:outputText value="#{row.SiteId}" id="ot41"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.PoNumber.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.PoNumber.label}"
+                         id="c17">
+                <af:outputText value="#{row.PoNumber}" id="ot50"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.TaxAmount.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.TaxAmount.label}"
+                         id="c36">
+                <af:outputText value="#{row.TaxAmount}" id="ot3"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.WithholdingTax.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.WithholdingTax.label}"
+                         id="c47">
+                <af:outputText value="#{row.WithholdingTax}" id="ot33"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoiceDate.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoiceDate.label}"
+                         id="c50">
+                <af:outputText value="#{row.InvoiceDate}" id="ot35">
+                  <af:convertDateTime pattern="#{bindings.AuditTableVO1.hints.InvoiceDate.format}"/>
+                </af:outputText>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CancelledDate.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CancelledDate.label}"
+                         id="c31">
+                <af:outputText value="#{row.CancelledDate}" id="ot2">
+                  <af:convertDateTime pattern="#{bindings.AuditTableVO1.hints.CancelledDate.format}"/>
+                </af:outputText>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CancelledBy.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CancelledBy.label}"
+                         id="c15">
+                <af:outputText value="#{row.CancelledBy}" id="ot44"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.ProjectId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.ProjectId.label}"
+                         id="c4">
+                <af:outputText value="#{row.ProjectId}" id="ot46"/>
+              </af:column>-->
+             
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierCancelBy.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierCancelBy.label}"
+                         id="c14">
+                <af:outputText value="#{row.CertifierCancelBy}" id="ot9"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierCancelOn.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierCancelOn.label}"
+                         id="c13">
+                <af:outputText value="#{row.CertifierCancelOn}" id="ot24">
+                  <af:convertDateTime pattern="#{bindings.AuditTableVO1.hints.CertifierCancelOn.format}"/>
+                </af:outputText>
+              </af:column>-->
+              
+              
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.ImageUrl.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.ImageUrl.label}"
+                         id="c45">
+                <af:outputText value="#{row.ImageUrl}" id="ot1"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.OrgId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.OrgId.label}"
+                         id="c23">
+                <af:outputText value="#{row.OrgId}" id="ot21"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.SiteName.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.SiteName.label}"
+                         id="c33">
+                <af:outputText value="#{row.SiteName}" id="ot25"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.TaxRegNumber.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.TaxRegNumber.label}"
+                         id="c35">
+                <af:outputText value="#{row.TaxRegNumber}" id="ot14"/>
+              </af:column>-->
+            
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CurrencyCode.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CurrencyCode.label}"
+                         id="c3">
+                <af:outputText value="#{row.CurrencyCode}" id="ot19"/>
+              </af:column>-->
+             
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.EmployeeNumber.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.EmployeeNumber.label}"
+                         id="c28">
+                <af:outputText value="#{row.EmployeeNumber}" id="ot27"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierEmailAdd.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierEmailAdd.label}"
+                         id="c2">
+                <af:outputText value="#{row.CertifierEmailAdd}" id="ot10"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvalidReason.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvalidReason.label}"
+                         id="c48">
+                <af:outputText value="#{row.InvalidReason}" id="ot43"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.PoType.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.PoType.label}"
+                         id="c27">
+                <af:outputText value="#{row.PoType}" id="ot5"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvoicePayload.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvoicePayload.label}"
+                         id="c56">
+                <af:outputText value="#{row.InvoicePayload}" id="ot55"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvalidReasonId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvalidReasonId.label}"
+                         id="c16">
+                <af:outputText value="#{row.InvalidReasonId}" id="ot51"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.InvalidReasonTypeId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.InvalidReasonTypeId.label}"
+                         id="c51">
+                <af:outputText value="#{row.InvalidReasonTypeId}" id="ot42"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.DocId.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.DocId.label}"
+                         id="c18">
+                <af:outputText value="#{row.DocId}" id="ot45"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Priority.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Priority.label}"
+                         id="c53">
+                <af:outputText value="#{row.Priority}" id="ot13"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Status.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Status.label}"
+                         id="c20">
+                <af:outputText value="#{row.Status}" id="ot12"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.ApOperationComments.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.ApOperationComments.label}"
+                         id="c29">
+                <af:outputText value="#{row.ApOperationComments}" id="ot28"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierRejReason.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierRejReason.label}"
+                         id="c57">
+                <af:outputText value="#{row.CertifierRejReason}" id="ot29"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierReassignTo.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierReassignTo.label}"
+                         id="c19">
+                <af:outputText value="#{row.CertifierReassignTo}" id="ot48"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierReassignComments.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierReassignComments.label}"
+                         id="c24">
+                <af:outputText value="#{row.CertifierReassignComments}"
+                               id="ot16"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.CertifierBy.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.CertifierBy.label}"
+                         id="c30">
+                <af:outputText value="#{row.CertifierBy}" id="ot32"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr1.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr1.label}"
+                         id="c7">
+                <af:outputText value="#{row.Attr1}" id="ot36"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr2.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr2.label}"
+                         id="c32">
+                <af:outputText value="#{row.Attr2}" id="ot11"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr3.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr3.label}"
+                         id="c22">
+                <af:outputText value="#{row.Attr3}" id="ot57"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr4.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr4.label}"
+                         id="c38">
+                <af:outputText value="#{row.Attr4}" id="ot52"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr5.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr5.label}"
+                         id="c58">
+                <af:outputText value="#{row.Attr5}" id="ot15"/>
+              </af:column>-->
+              
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr7.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr7.label}"
+                         id="c34">
+                <af:outputText value="#{row.Attr7}" id="ot20"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr8.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr8.label}"
+                         id="c1">
+                <af:outputText value="#{row.Attr8}" id="ot40"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr9.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr9.label}"
+                         id="c5">
+                <af:outputText value="#{row.Attr9}" id="ot4"/>
+              </af:column>-->
+              <!--<af:column sortProperty="#{bindings.AuditTableVO1.hints.Attr10.name}"
+                         sortable="false"
+                         headerText="#{bindings.AuditTableVO1.hints.Attr10.label}"
+                         id="c10">
+                <af:outputText value="#{row.Attr10}" id="ot7"/>
+              </af:column>-->
+              
+            </af:table>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:attribute name="title" value="Audit Table View"/>
+        </af:pageTemplate>
+        
+        <!-- Certifier Approve Comments -->
+        
+        <af:popup id="p11" autoCancel="disabled" childCreation="immediate"                  
+                  contentDelivery="lazyUncached"
+                  binding="#{AuditBean.approveCommentsPopUp}">
+            <af:panelWindow id="pw7" inlineStyle="width:350px;" modal="true">
+                <af:panelGroupLayout id="pgl72">
+                  <af:inputText label="Comments" id="it52" rows="9" columns="50"
+                                binding="#{AuditBean.approveCommentsPopUpIt}"
+                                 disabled="true" wrap="hard" 
+                                contentStyle="white-space:pre-wrap;"/>
+                  <af:commandButton text="OK" id="cb52"
+                                    styleClass="buttonDesign"
+                                    partialSubmit="true"
+                                    actionListener="#{AuditBean.onApproveCommentsPopupOKClick}"/> 
+                </af:panelGroupLayout>
+            </af:panelWindow>
+        </af:popup>
+        
+        <!-- Certifier Rejection Comments Popup -->
+         <af:popup id="p1" autoCancel="disabled" childCreation="immediate"                  
+                  contentDelivery="lazyUncached"
+                  binding="#{AuditBean.rejectionCommentsPopUp}">
+            <af:panelWindow id="pw1" inlineStyle="width:350px;" modal="true">
+                <af:panelGroupLayout id="pgl1">
+                  <af:inputText label="Comments" id="it1" rows="9" columns="50"
+                                binding="#{AuditBean.rejectionCommentsPopUpIt}"
+                                 disabled="true" wrap="hard" 
+                                contentStyle="white-space:pre-wrap;"/>
+                  <af:commandButton text="OK" id="cb1"
+                                    styleClass="buttonDesign"
+                                    partialSubmit="true"
+                                    actionListener="#{AuditBean.onRejectionCommentsPopupOKClick}"/> 
+                </af:panelGroupLayout>
+            </af:panelWindow>
+        </af:popup>
+        
+        
+        
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

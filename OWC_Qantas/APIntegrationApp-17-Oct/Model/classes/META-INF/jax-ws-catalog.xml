@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://eqsit-ap:16034/ApproverService/ApproverPS?wsdl"
+          uri="../ap/qantas/com/eQApprovalDetailsService/approverDetails_ptt_bindingQSService.wsdl"/>
+</catalog>

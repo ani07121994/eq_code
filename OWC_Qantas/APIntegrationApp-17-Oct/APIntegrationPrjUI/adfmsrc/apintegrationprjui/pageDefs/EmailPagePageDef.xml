@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="EmailPagePageDef"
+                Package="apintegrationprjui.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getTaskDetails.result"
+                    DataControl="APIntegrationPrjUI_CertifierHT" RangeSize="25"
+                    BeanClass="APIntegrationPrjUI_CertifierHT.getTaskDetails"
+                    id="getTaskDetailsIterator"/>
+    <accessorIterator MasterBinding="getTaskDetailsIterator" Binds="task"
+                      RangeSize="25"
+                      DataControl="APIntegrationPrjUI_CertifierHT"
+                      BeanClass="APIntegrationPrjUI_CertifierHT.task"
+                      id="taskIterator"/>
+    <accessorIterator MasterBinding="taskIterator" Binds="payload"
+                      RangeSize="25"
+                      DataControl="APIntegrationPrjUI_CertifierHT"
+                      BeanClass="APIntegrationPrjUI_CertifierHT.CertifierHTPayloadType"
+                      id="payloadIterator"/>
+    <accessorIterator MasterBinding="payloadIterator" Binds="FlexData"
+                      RangeSize="25"
+                      DataControl="APIntegrationPrjUI_CertifierHT"
+                      BeanClass="APIntegrationPrjUI_CertifierHT.FlexData"
+                      id="FlexDataIterator"/>
+    <accessorIterator MasterBinding="FlexDataIterator" Binds="FlexInfo"
+                      RangeSize="25"
+                      DataControl="APIntegrationPrjUI_CertifierHT"
+                      BeanClass="APIntegrationPrjUI_CertifierHT.FlexInfo"
+                      id="FlexInfoIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="getTaskDetails" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="getTaskDetails"
+                  IsViewObjectMethod="false"
+                  DataControl="APIntegrationPrjUI_CertifierHT"
+                  InstanceName="APIntegrationPrjUI_CertifierHT"
+                  ReturnName="data.APIntegrationPrjUI_CertifierHT.methodResults.getTaskDetails_APIntegrationPrjUI_CertifierHT_getTaskDetails_result">
+      <NamedData NDName="bpmWorklistContext" NDType="java.lang.String"/>
+      <NamedData NDName="bpmWorklistTaskId" NDType="java.lang.String"/>
+      <NamedData NDName="bpmWorklistTaskVersion" NDType="java.lang.String"/>
+    </methodAction>
+    <attributeValues IterBinding="FlexInfoIterator" id="invoiceNumber">
+      <AttrNames>
+        <Item Value="invoiceNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FlexInfoIterator" id="supplierName">
+      <AttrNames>
+        <Item Value="supplierName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema targetNamespace="http://xmlns.oracle.com/bpel/workflow/task" xmlns:tns="http://xmlns.oracle.com/bpel/workflow/task" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="www.EBSError.org" xmlns:ns0="http://www.FlexData.org">
+   <import namespace="http://www.FlexData.org" schemaLocation="FlexPayload.xsd"/>
+   <import namespace="www.EBSError.org" schemaLocation="EBSError.xsd"/>
+   <complexType name="APOperationTeamPayloadType">
+      <sequence>
+         <element ref="ns0:FlexData"/>
+         <element ref="ns1:EBSErrorImport"/>
+         <element name="Status" type="xsd:string"/>
+      </sequence>
+   </complexType>
+</schema>

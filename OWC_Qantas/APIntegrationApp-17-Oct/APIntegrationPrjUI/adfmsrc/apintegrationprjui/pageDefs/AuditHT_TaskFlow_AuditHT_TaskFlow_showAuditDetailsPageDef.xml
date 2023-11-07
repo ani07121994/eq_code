@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57"
+                id="AuditHT_TaskFlow_AuditHT_TaskFlow_showAuditDetailsPageDef"
+                Package="apintegrationprjui.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <action id="showAuditDetails" RequiresUpdateModel="true"
+            Action="invokeMethod" MethodName="showAuditDetails"
+            IsViewObjectMethod="false" DataControl="AuditBean"
+            InstanceName="AuditBean.dataProvider"/>
+  </bindings>
+</pageDefinition>
