@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall2">
+      <property
+         name="activityId">invoiceHeaderLinedataload</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>invoiceHeaderLinedataload&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">147.5</property>
+      <property
+         name="x">208.7207</property>
+   </MethodCall>
+   <View
+      id="View3">
+      <property
+         name="activityId">view1</property>
+      <property
+         name="page">/ap_overseasPage.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>view1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">139.49414</property>
+      <property
+         name="x">546.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall2"
+      to="View3">
+      <property
+         name="fromOutcome">invoiceHeaderLinedataload</property>
+      <property
+         name="sdm:polyPoints">R50,249.7207,147.14941,505.0,139.14355,L50</property>
+   </ControlFlowCase>
+</SDM>

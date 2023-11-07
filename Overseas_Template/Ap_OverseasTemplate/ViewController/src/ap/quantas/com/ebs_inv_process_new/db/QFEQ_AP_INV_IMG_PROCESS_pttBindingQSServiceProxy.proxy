@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="QFEQ_AP_INV_IMG_PROCESS_pttBindingQSService.xml"/>
+      <url path="QFEQ_AP_INV_IMG_PROCESS_ptt.java"/>
+      <url path="QFEQ_AP_INV_IMG_PROCESS_pttBindingQSPortClient.java"/>
+      <url path="../sp/APPSINVOICEINTBLTYPE.java"/>
+      <url path="../sp/package-info.java"/>
+      <url path="../sp/OutputParameters.java"/>
+      <url path="../sp/APPSOUTRESULTTBLTYPE.java"/>
+      <url path="QFEQ_AP_INV_IMG_PROCESS_pttBindingQSService.java"/>
+      <url path="../sp/APPSINVOICELINEREC.java"/>
+      <url path="../sp/APPSOUTRESULTREC.java"/>
+      <url path="../sp/ObjectFactory.java"/>
+      <url path="../sp/InputParameters.java"/>
+      <url path="../sp/APPSINVOICEHEADERREC.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="QFEQ_AP_INV_IMG_PROCESS_pttBindingQSService.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="ap.quantas.com.ebs_inv_process_new.db"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="ap.quantas.com.ebs_inv_process_new.sp"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="QFEQ_AP_INV_IMG_PROCESS_pttBindingQSPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="QFEQ_AP_INV_IMG_PROCESS_ptt-bindingQSPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="false"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="ap.quantas.com.ebs_inv_process_new.db.QFEQ_AP_INV_IMG_PROCESS_ptt"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="QFEQ_AP_INV_IMG_PROCESS_ptt-bindingQSPort"/>
+            <hash n="OPERATIONS">
+               <hash n="qfeqAPINVIMGPROCESS">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="eqsit-db" port="16033" path="/QFEQ_AP_INV_IMG_PROCESS/Proxy_Service/QFEQ_AP_INV_IMG_PROCESS_PS"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="QFEQ_AP_INV_IMG_PROCESS_ptt-bindingQSService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../Project1.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="http" host="eqsit-db" port="16033" path="/QFEQ_AP_INV_IMG_PROCESS/Proxy_Service/QFEQ_AP_INV_IMG_PROCESS_PS" query="wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BD_DEFAULT_DOCUMENT_WRAPPED" v="false"/>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS}QFEQ_AP_INV_IMG_PROCESS_ptt"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS}QFEQ_AP_INV_IMG_PROCESS_ptt-binding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="ap.quantas.com.ebs_inv_process_new.sp.OutputParameters.qfeqAPINVIMGPROCESS.ap.quantas.com.ebs_inv_process_new.sp.InputParameters"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="54b7aecf-0167-1000-8007-c0a8f32023b5"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="QFEQ_AP_INV_IMG_PROCESS_ptt-bindingQSPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS}QFEQ_AP_INV_IMG_PROCESS_ptt-binding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="ap.quantas.com.ebs_inv_process_new.sp.OutputParameters.qfeqAPINVIMGPROCESS.ap.quantas.com.ebs_inv_process_new.sp.InputParameters"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="eqsit-db" port="16033" path="/QFEQ_AP_INV_IMG_PROCESS/Proxy_Service/QFEQ_AP_INV_IMG_PROCESS_PS"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="ap.quantas.com.ebs_inv_process_new.db"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="ap.quantas.com.ebs_inv_process_new.sp"/>
+               <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS}QFEQ_AP_INV_IMG_PROCESS_ptt"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="ap.quantas.com.ebs_inv_process_new.db.QFEQ_AP_INV_IMG_PROCESS_pttImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="ap.quantas.com.ebs_inv_process_new.db.QFEQ_AP_INV_IMG_PROCESS_ptt"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../Project1.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/pcbpel/adapter/db/QFEQ_AP_INV_IMG_PROCESS_TEST-EBS/QFEQ_AP_INV_IMG_PROCESS/QFEQ_AP_INV_IMG_PROCESS"/>
+         <value n="WS_URI" v="QFEQ_AP_INV_IMG_PROCESS_ptt-bindingQSService"/>
+         <url n="WS_WSDL_FILE" protocol="http" host="eqsit-db" port="16033" path="/QFEQ_AP_INV_IMG_PROCESS/Proxy_Service/QFEQ_AP_INV_IMG_PROCESS_PS" query="wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

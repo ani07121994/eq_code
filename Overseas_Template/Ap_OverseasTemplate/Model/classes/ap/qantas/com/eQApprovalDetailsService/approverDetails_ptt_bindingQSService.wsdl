@@ -1,0 +1,27 @@
+<WL5G3N0:definitions
+     name="approverDetails-concrete"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/TesteQRule/BusinessRulePrj/approverDetails"
+     xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:WL5G3N1="http://xmlns.oracle.com/pcbpel/adapter/db/TesteQRule/BusinessRulePrj/approverDetails"
+    >
+    <WL5G3N0:import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/TesteQRule/BusinessRulePrj/approverDetails"
+         location="approverDetails.wsdl"/>
+    <WL5G3N0:binding name="approverDetails_ptt-binding" type="WL5G3N1:approverDetails_ptt">
+        <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <WL5G3N0:operation name="approverDetails">
+            <WL5G3N2:operation soapAction="approverDetails"/>
+            <WL5G3N0:input>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:input>
+            <WL5G3N0:output>
+                <WL5G3N2:body use="literal"/>
+            </WL5G3N0:output>
+        </WL5G3N0:operation>
+    </WL5G3N0:binding>
+    <WL5G3N0:service name="approverDetails_ptt-bindingQSService">
+        <WL5G3N0:port name="approverDetails_ptt-bindingQSPort" binding="WL5G3N1:approverDetails_ptt-binding">
+            <WL5G3N2:address location="http://eqsit-ap:16034/ApproverService/ApproverPS"/>
+        </WL5G3N0:port>
+    </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+  
+  <af:panelStretchLayout id="pt_psl1" dimensionsFrom="parent"
+                           topHeight="63px" styleClass="AFStretchWidth">
+    <f:facet name="center">
+        <af:facetRef facetName="center"/>
+       
+    </f:facet>
+    <f:facet name="top">
+    
+    
+        <af:panelStretchLayout id="pt_psl2" styleClass="stretchDesign"
+                               topHeight="63px" startWidth="432px"
+                               endWidth="322px">
+         <f:facet name="start">
+            <af:panelGroupLayout id="pt_pgl1" layout="horizontal">
+              <af:image source="#{userDetails.imagePath}" id="pt_i1"
+                        inlineStyle="width:75px; height:41px; padding-top:10px;padding-left:10px;"/>
+                       
+              <af:activeOutputText id="pt_aot1" value="#{userDetails.headerText}"
+                                   inlineStyle="color:White; font-size:large; padding-left:8px;"/>
+            
+            </af:panelGroupLayout>           
+          </f:facet>
+          <f:facet name="end">
+           <af:panelGroupLayout id="pt_pgUserDetails" layout="vertical"
+                                inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:small;">
+          <af:outputText id="e" value="#{userDetails.showUserDetails}"
+                         inlineStyle="color:White; padding-left:8px; font-size:small;" />
+             
+             <!-- <af:outputText id="logout" value="#{userDetails.logout}"
+                         inlineStyle="color:White; padding-left:8px; font-size:small;" /> -->               
+          
+          </af:panelGroupLayout>
+         </f:facet>
+       </af:panelStretchLayout>
+       
+        <!--<af:panelStretchLayout id="pt_psl2" styleClass="stretchDesign"
+                               topHeight="60px" >
+         <f:facet name="top">
+            <af:panelGroupLayout id="pt_pgl1" layout="horizontal">
+              <af:image source="/Images/qantaslogo.gif" id="pt_i1"
+                        inlineStyle="width:75px; height:41px; padding-top:10px;padding-left:10px;"/>
+                       
+              <af:activeOutputText id="pt_aot1" value="ApOverseas Template"
+                                   inlineStyle="color:White; font-size:large; padding-left:8px;"/>
+            
+            </af:panelGroupLayout>           
+          </f:facet>
+        </af:panelStretchLayout>-->
+        
+      </f:facet>
+        </af:panelStretchLayout>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>overseas_template</display-name>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

@@ -1,0 +1,78 @@
+<schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/sp/approverDetails" elementFormDefault="qualified"
+     xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/pcbpel/adapter/db/sp/approverDetails">
+    <element name="InputParameters">
+        <complexType>
+            <sequence>
+                <element name="INV_DETAILS" type="db:APPS.QFEQIF_APINV_INV_INFO" db:index="1" db:type="Struct"
+                     minOccurs="0" nillable="true"/>
+                <element name="INV_DIST_DTL" type="db:APPS.QFEQIF_APINV_INV_DIST_TBL_TYP" db:index="2"
+                     db:type="Array" minOccurs="0" nillable="true"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="OutputParameters">
+        <complexType>
+            <sequence>
+                <element name="OUT_RESULT" type="db:APPS.QFEQIF_APINV_APRVR_OUT_TBL_TP" db:index="3"
+                     db:type="Array" minOccurs="0" nillable="true"/>
+                <element name="STATUS" type="string" db:index="4" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+                <element name="MESSAGE" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0"
+                     nillable="true"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="APPS.QFEQIF_APINV_INV_INFO">
+        <sequence>
+            <element name="REQUESTER_NUMBER" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="ALTERNET_APPROVER_NUMBER" type="db:string500" db:type="VARCHAR2" minOccurs="0"
+                 nillable="true"/>
+            <element name="INVOICE_AMOUNT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="ORG_ID" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        </sequence>
+    </complexType>
+    <complexType name="APPS.QFEQIF_APINV_APPROVER_REC">
+        <sequence>
+            <element name="APP_NAME" type="db:string1000" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="APP_EMAIL" type="db:string1000" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="APP_EMP_NO" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="APP_POSITION" type="db:string1000" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="APP_APPROVE_LIMIT" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="APP_FNDL_CATEGORY" type="db:string500" db:type="VARCHAR2" minOccurs="0"
+                 nillable="true"/>
+        </sequence>
+    </complexType>
+    <complexType name="APPS.QFEQIF_APINV_INV_DIST_INFO">
+        <sequence>
+            <element name="LINE_NUMBER" type="decimal" db:type="NUMBER" minOccurs="0" nillable="true"/>
+            <element name="LINE_TYPE" type="db:string200" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+            <element name="GL_CODE_COMB" type="db:string500" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        </sequence>
+    </complexType>
+    <complexType name="APPS.QFEQIF_APINV_INV_DIST_TBL_TYP">
+        <sequence>
+            <element name="INV_DIST_DTL_ITEM" type="db:APPS.QFEQIF_APINV_INV_DIST_INFO" db:type="Struct"
+                 minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+        </sequence>
+    </complexType>
+    <complexType name="APPS.QFEQIF_APINV_APRVR_OUT_TBL_TP">
+        <sequence>
+            <element name="OUT_RESULT_ITEM" type="db:APPS.QFEQIF_APINV_APPROVER_REC" db:type="Struct"
+                 minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+        </sequence>
+    </complexType>
+    <simpleType name="string200">
+        <restriction base="string">
+            <maxLength value="200"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="string500">
+        <restriction base="string">
+            <maxLength value="500"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="string1000">
+        <restriction base="string">
+            <maxLength value="1000"/>
+        </restriction>
+    </simpleType>
+</schema>

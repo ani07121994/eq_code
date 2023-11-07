@@ -1,0 +1,43 @@
+<wsdl:definitions
+     name="RouterProcess"
+     targetNamespace="http://xmlns.oracle.com/JetStarApplication/Qantas_JSRouter/RouterProcess"
+     xmlns:ns1="http://www.InvoiceRouter.org"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:client="http://xmlns.oracle.com/JetStarApplication/Qantas_JSRouter/RouterProcess"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    >
+    <wsdl:documentation>
+        <abstractWSDL>http://eqsit-ap:16035/soa-infra/services/default/Qantas_JSRouter!1.4/RouterProcess.wsdl</abstractWSDL>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="RouterProcess">
+        <plnk:role name="RouterProcessProvider" portType="client:RouterProcess"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://www.InvoiceRouter.org" schemaLocation="RouterInput.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="RouterProcessRequestMessage">
+        <wsdl:part name="payload" element="ns1:invoiceImport"/>
+    </wsdl:message>
+    <wsdl:portType name="RouterProcess">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:RouterProcessRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="RouterProcessBinding" type="client:RouterProcess">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="process">
+            <soap:operation style="document" soapAction="process"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="RouterProcess_EP_ep">
+        <wsdl:port name="RouterProcess_pt" binding="client:RouterProcessBinding">
+            <soap:address location="http://eqsit-ap:16035/soa-infra/services/default/Qantas_JSRouter/RouterProcess_EP_ep"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

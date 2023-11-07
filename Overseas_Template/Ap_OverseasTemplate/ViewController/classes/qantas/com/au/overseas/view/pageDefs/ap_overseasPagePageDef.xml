@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="ap_overseasPagePageDef"
+                Package="qantas.com.au.overseas.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="void" Name="saveTemplate_return" IsQueriable="false"
+                IsUpdateable="0"
+                DefaultValue="${bindings.saveTemplate.result}"/>
+      <variable Type="java.lang.String" Name="saveTemplate_orgId"
+                IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="saveTemplate1_siteName"
+                IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="ApInvoiceOverseasTableEOView1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="ApInvoiceOverseasTableEOView1Iterator"/>
+    <iterator Binds="ApOverseasLineitemTableEOView1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="ApOverseasLineitemTableEOView1Iterator"/>
+    <page path="qantas.com.au.overseas.view.pageDefs.overseas_templatePageDef"
+          id="pt1"/>
+    <iterator Binds="TaxRateCodeLookupVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="TaxRateCodeLookupVO1Iterator"/>
+    <iterator Binds="ApOverseasTemplateTableEOView1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="ApOverseasTemplateTableEOView1Iterator"/>
+    <searchRegion Binds="ApOverseasTemplateTableEOView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ApOverseasTemplateTableEOView1Query"/>
+    <iterator Binds="SitesVO1" RangeSize="25" DataControl="EBS_AMDataControl"
+              id="SitesVO1Iterator"/>
+    <iterator Binds="SitesDetailsVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="SitesDetailsVO1Iterator"/>
+    <iterator Binds="POVO1" RangeSize="25" DataControl="EBS_AMDataControl"
+              id="POVO1Iterator"/>
+    <iterator Binds="CurrencyCodeVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="CurrencyCodeVO1Iterator"/>
+    <iterator Binds="CertifierNameVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="CertifierNameVO1Iterator"/>
+    <iterator Binds="CompanyCounterPartyVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="CompanyCounterPartyVO1Iterator"/>
+    <iterator Binds="CostCentreVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="CostCentreVO1Iterator"/>
+    <iterator Binds="AccountVO1" RangeSize="25" DataControl="EBS_AMDataControl"
+              id="AccountVO1Iterator"/>
+    <iterator Binds="AnalysisCodeVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="AnalysisCodeVO1Iterator"/>
+    <iterator Binds="ValidateGLCodeVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="ValidateGLCodeVO1Iterator"/>
+    <iterator Binds="ProjectNumberVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="ProjectNumberVO1Iterator"/>
+    <iterator Binds="TaskNumberVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="TaskNumberVO1Iterator"/>
+    <iterator Binds="ExpenditureOrgVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="ExpenditureOrgVO1Iterator"/>
+    <iterator Binds="DuplicateRecordCheckVO1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="DuplicateRecordCheckVO1Iterator"/>
+    <iterator Binds="DuplicateInvoiceExclusionStatusListVO1Iterator1"
+              RangeSize="25" DataControl="EQfiles_APModuleDataControl"
+              id="DuplicateInvoiceExclusionStatusListVO1Iterator1Iterator"/>
+    <iterator Binds="PoNoCertifierVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="PoNoCertifierVO1Iterator"/>
+    <iterator Binds="CertifierNameVO_ActiveOnlyRecords1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="CertifierNameVO_ActiveOnlyRecords1Iterator"/>
+    <iterator Binds="eQApproverDetails1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="eQApproverDetails1Iterator"/>
+    <iterator Binds="gl_cc_overseas_suspense_check1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="gl_cc_overseas_suspense_check1Iterator"/>
+    <iterator Binds="gl_cc_overseas_validation1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="gl_cc_overseas_validation1Iterator"/>
+    <iterator Binds="TestViewObject1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="TestViewObject1Iterator"/>
+    <iterator Binds="POLineDetailsVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="POLineDetailsVO1Iterator"/>
+    <iterator Binds="POLineNumberDetailsVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl"
+              id="POLineNumberDetailsVO1Iterator"/>
+    <iterator Binds="ExpenditureDateVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="ExpenditureDateVO1Iterator"/>
+    <iterator Binds="ExpenditureTypeVO1" RangeSize="25"
+              DataControl="EBS_AMDataControl" id="ExpenditureTypeVO1Iterator"/>
+    <iterator Binds="overseas_dup_chk_VO1" RangeSize="25"
+              DataControl="EQfiles_APModuleDataControl"
+              id="overseas_dup_chk_VO1Iterator"/>
+    <iterator Binds="ValidateRoundingAmount1" RangeSize="10" DataControl="EBS_AMDataControl"
+              id="ValidateRoundingAmount1Iterator"/>
+    <iterator Binds="ValidateTaxCalcRounding1" RangeSize="10" DataControl="EBS_AMDataControl"
+              id="ValidateTaxCalcRounding1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="UserId">
+      <AttrNames>
+        <Item Value="UserId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoiceId">
+      <AttrNames>
+        <Item Value="InvoiceId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ModifiedOn">
+      <AttrNames>
+        <Item Value="ModifiedOn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ModifiedBy">
+      <AttrNames>
+        <Item Value="ModifiedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="SupplierId">
+      <AttrNames>
+        <Item Value="SupplierId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="SupplierName">
+      <AttrNames>
+        <Item Value="SupplierName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="SupplierNumber">
+      <AttrNames>
+        <Item Value="SupplierNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="SiteId">
+      <AttrNames>
+        <Item Value="SiteId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="PoNumber">
+      <AttrNames>
+        <Item Value="PoNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="TaxAmount">
+      <AttrNames>
+        <Item Value="TaxAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="WithholdingTax">
+      <AttrNames>
+        <Item Value="WithholdingTax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoiceDate">
+      <AttrNames>
+        <Item Value="InvoiceDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CancelledDate">
+      <AttrNames>
+        <Item Value="CancelledDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CancelledBy">
+      <AttrNames>
+        <Item Value="CancelledBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ProjectId">
+      <AttrNames>
+        <Item Value="ProjectId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InternalStatus">
+      <AttrNames>
+        <Item Value="InternalStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierCancelBy">
+      <AttrNames>
+        <Item Value="CertifierCancelBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierCancelOn">
+      <AttrNames>
+        <Item Value="CertifierCancelOn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="AlternateApprover">
+      <AttrNames>
+        <Item Value="AlternateApprover"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="DocumentType">
+      <AttrNames>
+        <Item Value="DocumentType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoiceType">
+      <AttrNames>
+        <Item Value="InvoiceType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ImageUrl">
+      <AttrNames>
+        <Item Value="ImageUrl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="OrgId">
+      <AttrNames>
+        <Item Value="OrgId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoiceNumber">
+      <AttrNames>
+        <Item Value="InvoiceNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="SiteName">
+      <AttrNames>
+        <Item Value="SiteName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="TaxRegNumber">
+      <AttrNames>
+        <Item Value="TaxRegNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoiceTotAmount">
+      <AttrNames>
+        <Item Value="InvoiceTotAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CurrencyCode">
+      <AttrNames>
+        <Item Value="CurrencyCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierName">
+      <AttrNames>
+        <Item Value="CertifierName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="EmployeeNumber">
+      <AttrNames>
+        <Item Value="EmployeeNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierEmailAdd">
+      <AttrNames>
+        <Item Value="CertifierEmailAdd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvalidReason">
+      <AttrNames>
+        <Item Value="InvalidReason"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvalidCode">
+      <AttrNames>
+        <Item Value="InvalidCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="PoType">
+      <AttrNames>
+        <Item Value="PoType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvoicePayload">
+      <AttrNames>
+        <Item Value="InvoicePayload"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvalidReasonId">
+      <AttrNames>
+        <Item Value="InvalidReasonId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvalidReasonType">
+      <AttrNames>
+        <Item Value="InvalidReasonType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="InvalidReasonTypeId">
+      <AttrNames>
+        <Item Value="InvalidReasonTypeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="DocId">
+      <AttrNames>
+        <Item Value="DocId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Priority">
+      <AttrNames>
+        <Item Value="Priority"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Status">
+      <AttrNames>
+        <Item Value="Status"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ApOperationComments">
+      <AttrNames>
+        <Item Value="ApOperationComments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierRejReason">
+      <AttrNames>
+        <Item Value="CertifierRejReason"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierRejComments">
+      <AttrNames>
+        <Item Value="CertifierRejComments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierReassignTo">
+      <AttrNames>
+        <Item Value="CertifierReassignTo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierReassignComments">
+      <AttrNames>
+        <Item Value="CertifierReassignComments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierApproveComments">
+      <AttrNames>
+        <Item Value="CertifierApproveComments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="CertifierBy">
+      <AttrNames>
+        <Item Value="CertifierBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr1">
+      <AttrNames>
+        <Item Value="Attr1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr2">
+      <AttrNames>
+        <Item Value="Attr2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr3">
+      <AttrNames>
+        <Item Value="Attr3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr4">
+      <AttrNames>
+        <Item Value="Attr4"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr5">
+      <AttrNames>
+        <Item Value="Attr5"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr6">
+      <AttrNames>
+        <Item Value="Attr6"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr7">
+      <AttrNames>
+        <Item Value="Attr7"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr8">
+      <AttrNames>
+        <Item Value="Attr8"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr9">
+      <AttrNames>
+        <Item Value="Attr9"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ApOverseasLineitemTableEOView1Iterator"
+          id="ApOverseasLineitemTableEOView1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ApOverseasLineitemTableEOView"
+                      Name="ApOverseasLineitemTableEOView10">
+        <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="InvoiceId"/>
+          <Item Value="LineNumber"/>
+          <Item Value="LineType"/>
+          <Item Value="LinePoNum"/>
+          <Item Value="PoLineNum"/>
+          <Item Value="LineDescription"/>
+          <Item Value="Quantity"/>
+          <Item Value="Uom"/>
+          <Item Value="UnitPrice"/>
+          <Item Value="LineTotalAmount"/>
+          <Item Value="TaxRate"/>
+          <Item Value="TaxRateCode"/>
+          <Item Value="ProjectNo"/>
+          <Item Value="TaskNo"/>
+          <Item Value="ExpinditureOrg"/>
+          <Item Value="ExpenditureDate"/>
+          <Item Value="GlNo"/>
+          <Item Value="TaxAmountLineitem"/>
+          <Item Value="Attr2"/>
+          <Item Value="Attr3"/>
+          <Item Value="Attr4"/>
+          <Item Value="Attr5"/>
+          <Item Value="Attr6"/>
+          <Item Value="Attr7"/>
+          <Item Value="Attr8"/>
+          <Item Value="Attr9"/>
+          <Item Value="Attr10" />
+          <Item Value="sumOfLineTotal"/>
+          <Item Value="sumOfTaxTotal"/>
+          <Item Value="RecCodeFlag"/>
+          <Item Value="Attr11" Binds="Attr11"/>
+          <Item Value="TaskidLine"/>
+          <Item Value="ProjectidLine"/>
+          <Item Value="RecCode"/>
+          
+          
+
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="addLineItemRow" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="addLineItemRow"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="invoiceId" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="saveAllFormDetails" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="saveAllFormDetails"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="invoiceId" NDType="java.lang.String"/>
+      <NamedData NDName="siteId" NDType="java.lang.String"/>
+      <NamedData NDName="supName" NDType="java.lang.String"/>
+      <NamedData NDName="currency" NDType="java.lang.String"/>
+      <NamedData NDName="employeeNo" NDType="java.lang.String"/>
+    </methodAction>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="EQfiles_APModuleDataControl"/>
+    <button IterBinding="ApOverseasLineitemTableEOView1Iterator" id="Attr11"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Attr11"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+    <tree IterBinding="TaxRateCodeLookupVO1Iterator" id="TaxRateCodeLookupVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.TaxRateCodeLookupVO"
+                      Name="TaxRateCodeLookupVO10">
+        <AttrNames>
+          <Item Value="TaxRateCode"/>
+          <Item Value="TaxRate"/>
+          <Item Value="Ponum"/>
+          <Item Value="VendorSiteId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ApOverseasLineitemTableEOView1Iterator"
+                     id="sumOfLineTotal">
+      <AttrNames>
+        <Item Value="sumOfLineTotal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApOverseasLineitemTableEOView1Iterator"
+                     id="sumOfTaxTotal">
+      <AttrNames>
+        <Item Value="sumOfTaxTotal"/>
+      </AttrNames>
+    </attributeValues>
+  
+    <methodAction id="onAddTemplateRow" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="onAddTemplateRow"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="userId" NDType="java.lang.String"/>
+    </methodAction>
+
+    <methodAction id="onAddTemplateRow_new" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="onAddTemplateRow_new"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="userId" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="saveTemplate" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="saveTemplate"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="userId" NDType="java.lang.String"/>
+      <NamedData NDName="supName" NDType="java.lang.String"/>
+      <NamedData NDName="suppNum" NDType="java.lang.String"/>
+      <NamedData NDName="siteId" NDType="java.lang.String"/>
+      <NamedData NDName="operatingUnit" NDType="java.lang.String"/>
+      <NamedData NDName="taxReg" NDType="java.lang.String"/>
+      <NamedData NDName="invoiceType" NDType="java.lang.String"/>
+      <NamedData NDName="docType" NDType="java.lang.String"/>
+      <NamedData NDName="templateName" NDType="java.lang.String"/>
+      <NamedData NDName="orgId" NDType="java.lang.String"/>
+       <NamedData NDName="siteName" NDType="java.lang.String"/>
+    </methodAction>
+    <tree IterBinding="ApOverseasTemplateTableEOView1Iterator"
+          id="ApOverseasTemplateTableEOView1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ApOverseasTemplateTableEOView"
+                      Name="ApOverseasTemplateTableEOView10">
+        <AttrNames>
+          <Item Value="TemplateName"/>
+          <Item Value="DocumentType"/>
+          <Item Value="InvoiceType"/>
+          <Item Value="SupplierNumber"/>
+          <Item Value="SiteId"/>
+          <Item Value="OperatingUnit"/>
+          <Item Value="TaxRegNumber"/>
+          <Item Value="SiteName"/>
+          <Item Value="Attr1"/>
+          <Item Value="SupplierName"/>
+          <Item Value="deleteRow" Binds="deleteRow"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SitesVO1Iterator" id="SitesVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.SitesVO"
+                      Name="SitesVO10">
+        <AttrNames>
+          <Item Value="OperatingUnit"/>
+          <Item Value="VendorNumber"/>
+          <Item Value="VendorId"/>
+          <Item Value="VendorName"/>
+          <Item Value="OrgId"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="VendorSiteCode"/>
+          <Item Value="TaxRegistrationNumSuppSite"/>
+          <Item Value="CurrencyCode"/>
+          <Item Value="TaxRateCode"/>
+          <Item Value="PaymentTerms"/>
+          <Item Value="Address"/>
+          <Item Value="InactiveDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SitesDetailsVO1Iterator" id="SitesDetailsVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.SitesDetailsVO"
+                      Name="SitesDetailsVO10">
+        <AttrNames>
+          <Item Value="OperatingUnit"/>
+          <Item Value="VendorNumber"/>
+          <Item Value="VendorId"/>
+          <Item Value="VendorName"/>
+          <Item Value="OrgId"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="VendorSiteCode"/>
+          <Item Value="TaxRegistrationNumSuppSite"/>
+          <Item Value="CurrencyCode"/>
+          <Item Value="TaxRateCode"/>
+          <Item Value="PaymentTerms"/>
+          <Item Value="Address"/>
+          <Item Value="InactiveDate"/>
+          <Item Value="BankAccountNum"/>
+                    <Item Value="MaskedBankAccNo"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="POVO1Iterator" id="POVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.POVO" Name="POVO10">
+        <AttrNames>
+          <Item Value="OperatingUnit"/>
+          <Item Value="PoNum"/>
+          <Item Value="PoType"/>
+          <Item Value="PoHeaderId"/>
+          <Item Value="CreationDate"/>
+          <Item Value="PoStatus"/>
+          <Item Value="PoCancelledStatus"/>
+          <Item Value="VendorNumber"/>
+          <Item Value="VendorName"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="VendorSiteCode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CurrencyCodeVO1Iterator" id="CurrencyCodeVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CurrencyCodeVO"
+                      Name="CurrencyCodeVO10">
+        <AttrNames>
+          <Item Value="CurrencyCode"/>
+          <Item Value="IssuingTerritoryCode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CertifierNameVO1Iterator" id="CertifierNameVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CertifierNameVO"
+                      Name="CertifierNameVO10">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleNames"/>
+          <Item Value="LastName"/>
+          <Item Value="EmployeeNumber"/>
+          <Item Value="EmailAddress"/>
+          <Item Value="Department"/>
+          <Item Value="PersonId"/>
+          <Item Value="Conname"/>
+          <Item Value="CurrentEmployeeFlag"/>
+          <Item Value="Prefnamelastname"/>
+          <Item Value="PreferredName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CompanyCounterPartyVO1Iterator"
+          id="CompanyCounterPartyVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CompanyCounterPartyVO"
+                      Name="CompanyCounterPartyVO10">
+        <AttrNames>
+          <Item Value="Company"/>
+          <Item Value="CompanyDescription"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CostCentreVO1Iterator" id="CostCentreVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CostCentreVO"
+                      Name="CostCentreVO10">
+        <AttrNames>
+          <Item Value="Costcentre"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AccountVO1Iterator" id="AccountVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.AccountVO"
+                      Name="AccountVO10">
+        <AttrNames>
+          <Item Value="Account"/>
+          <Item Value="AccountDescription"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="AnalysisCodeVO1Iterator" id="AnalysisCodeVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.AnalysisCodeVO"
+                      Name="AnalysisCodeVO10">
+        <AttrNames>
+          <Item Value="Analysiscode"/>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CompanyCounterPartyVO1Iterator"
+          id="CompanyCounterPartyVO11">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CompanyCounterPartyVO"
+                      Name="CompanyCounterPartyVO110">
+        <AttrNames>
+          <Item Value="Company"/>
+          <Item Value="CompanyDescription"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ValidateGLCodeVO1Iterator" id="Validglcode">
+      <AttrNames>
+        <Item Value="Validglcode"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ProjectNumberVO1Iterator" id="ProjectNumberVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ProjectNumberVO"
+                      Name="ProjectNumberVO10">
+        <AttrNames>
+          <Item Value="ProjectId"/>
+          <Item Value="ProjectNumber"/>
+          <Item Value="ProjectName"/>
+          <Item Value="ProjectStatusCode"/>
+          <Item Value="OrgId"/>
+          <Item Value="OperatingUnit"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TaskNumberVO1Iterator" id="TaskNumberVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.TaskNumberVO"
+                      Name="TaskNumberVO10">
+        <AttrNames>
+          <Item Value="TaskNumber"/>
+          <Item Value="TaskName"/>
+          <Item Value="TaskId"/>
+          <Item Value="ProjectId"/>
+          <Item Value="Segment1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ExpenditureOrgVO1Iterator" id="ExpenditureOrgVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ExpenditureOrgVO"
+                      Name="ExpenditureOrgVO10">
+        <AttrNames>
+          <Item Value="ExpenditureOrg"/>
+          <Item Value="StartDate"/>
+          <Item Value="OperatingUnitName"/>
+          <Item Value="OrgId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ApOverseasTemplateTableEOView1Iterator"
+          id="ApOverseasTemplateTableEOView11">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ApOverseasTemplateTableEOView"
+                      Name="ApOverseasTemplateTableEOView110">
+        <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="TemplateId"/>
+          <Item Value="InvoiceId"/>
+          <Item Value="ModifiedOn"/>
+          <Item Value="TemplateName"/>
+          <Item Value="DocumentType"/>
+          <Item Value="InvoiceType"/>
+          <Item Value="ModifiedBy"/>
+          <Item Value="SupplierName"/>
+          <Item Value="SupplierNumber"/>
+          <Item Value="SiteId"/>
+          <Item Value="OrgId"/>
+          <Item Value="OperatingUnit"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="TaxRegNumber"/>
+          <Item Value="SiteName"/>
+          <Item Value="Attr1"/>
+          <Item Value="Attr2"/>
+          <Item Value="Attr3"/>
+          <Item Value="Attr4"/>
+          <Item Value="Attr5"/>
+          <Item Value="Attr6"/>
+          <Item Value="Attr7"/>
+          <Item Value="Attr8"/>
+          <Item Value="Attr9"/>
+          <Item Value="Attr10"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DuplicateRecordCheckVO1Iterator"
+          id="DuplicateRecordCheckVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.DuplicateRecordCheckVO1"
+                      Name="DuplicateRecordCheckVO10">
+        <AttrNames>
+          <Item Value="InvoiceId"/>
+          <Item Value="SupplierName"/>
+          <Item Value="SiteId"/>
+          <Item Value="InvoiceDate"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="Attr1"/>
+          <Item Value="InternalStatus"/>
+          <Item Value="InvoiceTotAmount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DuplicateInvoiceExclusionStatusListVO1Iterator1Iterator"
+          id="DuplicateInvoiceExclusionStatusListVO1Iterator1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.DuplicateInvoiceExclusionStatusListVO1Iterator"
+                      Name="DuplicateInvoiceExclusionStatusListVO1Iterator10">
+        <AttrNames>
+          <Item Value="Id"/>
+          <Item Value="InternalStatus"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr16">
+      <AttrNames>
+        <Item Value="Attr16"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr17">
+      <AttrNames>
+        <Item Value="Attr17"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="Attr18">
+      <AttrNames>
+        <Item Value="Attr18"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="PoNoCertifierVO1Iterator" id="PoNoCertifierVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.PoNoCertifierVO"
+                      Name="PoNoCertifierVO10">
+        <AttrNames>
+          <Item Value="OperatingUnit"/>
+          <Item Value="PoNum"/>
+          <Item Value="PoType"/>
+          <Item Value="CreationDate"/>
+          <Item Value="PoStatus"/>
+          <Item Value="VendorNumber"/>
+          <Item Value="VendorName"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="VendorSiteCode"/>
+          <Item Value="ClosedCode"/>
+          <Item Value="CancelFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ApOverseasTemplateTableEOView1Iterator"
+          id="ApOverseasTemplateTableEOView12">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ApOverseasTemplateTableEOView"
+                      Name="ApOverseasTemplateTableEOView120">
+        <AttrNames>
+          <Item Value="TemplateId"/>
+          <Item Value="TemplateName"/>
+          <Item Value="DocumentType"/>
+          <Item Value="InvoiceType"/>
+          <Item Value="ModifiedBy"/>
+          <Item Value="SupplierName"/>
+          <Item Value="SupplierNumber"/>
+          <Item Value="SiteId"/>
+          <Item Value="OrgId"/>
+          <Item Value="OperatingUnit"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="TaxRegNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="CertifierNameVO_ActiveOnlyRecords1Iterator"
+          id="CertifierNameVO_ActiveOnlyRecords1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.CertifierNameVO_ActiveOnlyRecords"
+                      Name="CertifierNameVO_ActiveOnlyRecords10">
+        <AttrNames>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleNames"/>
+          <Item Value="LastName"/>
+          <Item Value="EmployeeNumber"/>
+          <Item Value="EmailAddress"/>
+          <Item Value="Department"/>
+          <Item Value="PersonId"/>
+          <Item Value="Conname"/>
+          <Item Value="CurrentEmployeeFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <button IterBinding="ApOverseasTemplateTableEOView1Iterator" id="deleteRow"
+            DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="deleteRow"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+    <tree IterBinding="eQApproverDetails1Iterator" id="eQApproverDetails1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.view.eQApproverDetails"
+                      Name="eQApproverDetails10">
+        <AttrNames>
+          <Item Value="lineSeqNumber"/>
+          <Item Value="approverName"/>
+          <Item Value="appoverEmail"/>
+          <Item Value="appEmpNo"/>
+          <Item Value="appPosition"/>
+          <Item Value="appApproveLimit"/>
+          <Item Value="appFindelCategory"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="gl_cc_overseas_suspense_check1Iterator"
+          id="gl_cc_overseas_suspense_check1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.gl_cc_overseas_suspense_check"
+                      Name="gl_cc_overseas_suspense_check10">
+        <AttrNames>
+          <Item Value="ValidglSuspensecheck"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="gl_cc_overseas_validation1Iterator"
+          id="gl_cc_overseas_validation1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.gl_cc_overseas_validation"
+                      Name="gl_cc_overseas_validation10">
+        <AttrNames>
+          <Item Value="ValidglOverseasvalidation"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="TestViewObject1Iterator" id="Validglcode1">
+      <AttrNames>
+        <Item Value="Validglcode"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="POVO1Iterator" id="POVO11">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.POVO"
+                      Name="POVO110">
+        <AttrNames>
+          <Item Value="OperatingUnit"/>
+          <Item Value="PoNum"/>
+          <Item Value="PoType"/>
+          <Item Value="PoHeaderId"/>
+          <Item Value="CreationDate"/>
+          <Item Value="PoStatus"/>
+          <Item Value="PoCancelledStatus"/>
+          <Item Value="VendorNumber"/>
+          <Item Value="VendorName"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="VendorSiteCode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="POLineDetailsVO1Iterator" id="POLineDetailsVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.POLineDetailsVO"
+                      Name="POLineDetailsVO10">
+        <AttrNames>
+          <Item Value="PoNumber"/>
+          <Item Value="LineNum"/>
+          <Item Value="Quantity"/>
+          <Item Value="Uom"/>
+          <Item Value="UnitPrice"/>
+          <Item Value="VendorId"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="OrgId"/>
+          <Item Value="ItemDescription"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="POLineNumberDetailsVO1Iterator"
+          id="POLineNumberDetailsVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.POLineNumberDetailsVO"
+                      Name="POLineNumberDetailsVO10">
+        <AttrNames>
+          <Item Value="PoNumber"/>
+          <Item Value="LineNum"/>
+          <Item Value="Quantity"/>
+          <Item Value="Uom"/>
+          <Item Value="UnitPrice"/>
+          <Item Value="VendorId"/>
+          <Item Value="VendorSiteId"/>
+          <Item Value="OrgId"/>
+          <Item Value="ItemDescription"/>
+          <Item Value="PoLineStatus"/>
+          <Item Value="LineCancelledStatus"/>
+          <Item Value="TaxRateCode"/>
+          <Item Value="TaxRate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ExpenditureDateVO1Iterator" id="ExpenditureDateVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ExpenditureDateVO"
+                      Name="ExpenditureDateVO10">
+        <AttrNames>
+          <Item Value="Validexpendituredatereason"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="variables" id="orgId">
+      <AttrNames>
+        <Item Value="saveTemplate_orgId"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="saveTemplate1" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="saveTemplate"
+                  IsViewObjectMethod="false"
+                  DataControl="EQfiles_APModuleDataControl"
+                  InstanceName="EQfiles_APModuleDataControl.dataProvider">
+      <NamedData NDName="userId" NDType="java.lang.String"/>
+      <NamedData NDName="supName" NDType="java.lang.String"/>
+      <NamedData NDName="suppNum" NDType="java.lang.String"/>
+      <NamedData NDName="siteId" NDType="java.lang.String"/>
+      <NamedData NDName="operatingUnit" NDType="java.lang.String"/>
+      <NamedData NDName="taxReg" NDType="java.lang.String"/>
+      <NamedData NDName="invoiceType" NDType="java.lang.String"/>
+      <NamedData NDName="docType" NDType="java.lang.String"/>
+      <NamedData NDName="templateName" NDType="java.lang.String"/>
+      <NamedData NDName="orgId" NDType="java.lang.String"/>
+      <NamedData NDName="siteName" NDType="java.lang.String"
+                 NDValue="${bindings.saveTemplate1_siteName}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="siteName">
+      <AttrNames>
+        <Item Value="saveTemplate1_siteName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ExpenditureTypeVO1Iterator" id="ExpenditureTypeVO1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ExpenditureTypeVO"
+                      Name="ExpenditureTypeVO10">
+        <AttrNames>
+          <Item Value="ExpenditureType"/>
+          <Item Value="ExpenditureCategory"/>
+          <Item Value="Projectid"/>
+          <Item Value="Taskid"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="AlternateApprvrNo">
+      <AttrNames>
+        <Item Value="AlternateApprvrNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ApInvoiceOverseasTableEOView1Iterator"
+                     id="ElectRemittance">
+      <AttrNames>
+        <Item Value="ElectRemittance"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="overseas_dup_chk_VO1Iterator" id="Flag">
+      <AttrNames>
+        <Item Value="Flag"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ValidateRoundingAmount1Iterator" id="ValidateRoundingAmount1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ValidateRoundingAmount" Name="ValidateRoundingAmount10">
+        <AttrNames>
+          <Item Value="Validroundamount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ValidateTaxCalcRounding1Iterator" id="ValidateTaxCalcRounding1">
+      <nodeDefinition DefName="qantas.com.au.overseas.model.ValidateTaxCalcRounding" Name="ValidateTaxCalcRounding10">
+        <AttrNames>
+          <Item Value="Validtaxrounding"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

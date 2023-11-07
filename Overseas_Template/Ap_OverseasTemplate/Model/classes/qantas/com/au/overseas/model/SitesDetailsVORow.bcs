@@ -1,0 +1,20 @@
+//Groovy Scripts for qantas.com.au.overseas.model.SitesDetailsVO
+
+package qantas.com.au.overseas.model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+import oracle.jbo.script.annotation.RefreshExpression;
+
+@TransientValueExpression(attributeName="MaskedBankAccNo")
+def MaskedBankAccNo_ExpressionScript_Expression()
+{
+BankAccountNum!=null && BankAccountNum.length()>0?"XXXXX"+BankAccountNum.substring(BankAccountNum.length() - 4):null
+}
+
+
+@RefreshExpression(attributeName="MaskedBankAccNo")
+def MaskedBankAccNo_RecalcExpressionScript_RecalcExpression()
+{
+true
+}
+
