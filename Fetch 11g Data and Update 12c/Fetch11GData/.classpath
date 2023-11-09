@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_144"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-1.8.6.jar"/>
+	<classpathentry kind="lib" path="lib/quartz-weblogic-1.8.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.15.jar" sourcepath="C:/Users/2292543/.m2/repository/org/apache/poi/poi/3.15/poi-3.15-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.15.jar" sourcepath="C:/Users/2292543/.m2/repository/org/apache/poi/poi-ooxml/3.15/poi-ooxml-3.15-sources.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.0.jar"/>
+	<classpathentry kind="lib" path="lib/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="lib/cache.jar"/>
+	<classpathentry kind="lib" path="lib/external-annots.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-commands.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-common.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-config.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-integration-bpel.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-model.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-client.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-common.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-native.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-rendering.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-server.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-wlst.jar"/>
+	<classpathentry kind="lib" path="lib/jai_codec.jar"/>
+	<classpathentry kind="lib" path="lib/jai_core.jar"/>
+	<classpathentry kind="lib" path="lib/jai_imageio.jar"/>
+	<classpathentry kind="lib" path="lib/orai18n-service.jar"/>
+	<classpathentry kind="lib" path="lib/ordim.jar"/>
+	<classpathentry kind="lib" path="lib/ordimimg.jar"/>
+	<classpathentry kind="lib" path="lib/ordmis.jar"/>
+	<classpathentry kind="lib" path="lib/viewer-cache-repository.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-agents.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-infrastructure.jar"/>
+	<classpathentry kind="lib" path="lib/imaging-axf-integration-ebs.jar"/>
+	<classpathentry kind="lib" path="lib/viewer-cache.jar"/>
+	<classpathentry kind="lib" path="lib/dup-resources.jar"/>
+	<classpathentry kind="lib" path="lib/ecm-client.jar"/>
+	<classpathentry kind="lib" path="lib/ecm-wls.jar"/>
+	<classpathentry kind="lib" path="lib/glassfish.jaxws.rt_1.3.0.0_2-1-5.jar"/>
+	<classpathentry kind="lib" path="lib/javax.persistence_1.0.0.0_1-0-2.jar"/>
+	<classpathentry kind="lib" path="lib/oracle.webservices.standalone.client.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
