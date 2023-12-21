@@ -1,4 +1,0 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="http://eqdev-soa.qantas.com.au:16015/soa-infra/services/default/QFEQ_Outbound_WF015WCC/QFEQ_Outbound_WF015Service?WSDL"
-          uri="http://eqdev-soa.qantas.com.au:16015/soa-infra/services/default/QFEQ_Outbound_WF015WCC/QFEQ_Outbound_WF015Service?WSDL"/>
-</catalog>
