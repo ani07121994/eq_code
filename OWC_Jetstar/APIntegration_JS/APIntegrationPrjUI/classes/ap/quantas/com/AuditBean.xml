@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
-          id="AuditBean" Package="ap.quantas.com"
-          BeanClass="ap.quantas.com.AuditBean" isJavaBased="true">
-  <MethodAccessor IsCollection="false" Type="void" id="showAuditDetails"
-                  ReturnNodeName="Return"/>
-  <ConstructorMethod IsCollection="true" Type="ap.quantas.com.AuditBean"
-                     BeanClass="ap.quantas.com.AuditBean" id="AuditBean"/>
-</JavaBean>
