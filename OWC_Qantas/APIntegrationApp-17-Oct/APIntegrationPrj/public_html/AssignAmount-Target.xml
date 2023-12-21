@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<ns0:invoiceImport xmlns:ns0="http://www.InvoiceData.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.InvoiceData.org file:/C:/JDeveloper/APIntegrationWP/APIntegrationApp/APIntegrationPrj/xsd/InvoiceData.xsd">
-   <ns0:additionalinfo>
-      <ns0:LineTotalAmount>144</ns0:LineTotalAmount>
-      <ns0:TaxTotalAmount>2630503.07</ns0:TaxTotalAmount>
-   </ns0:additionalinfo>
-</ns0:invoiceImport>
